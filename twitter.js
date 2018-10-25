@@ -44,6 +44,8 @@ async function setting(index) {
       // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
       await editCheckbox(true, "allow_dms_from_anyone");
       await editCheckbox(true, "allow_dm_receipts");
+      await editCheckboxName(true, "search-settings-nsfw");
+      await editCheckboxName(true, "search-settings-blocked-accounts");      
       await editCheckbox(false, "user_nsfw_view");
       await editCheckbox(true, "user_nsfw_user");
 
@@ -91,6 +93,7 @@ async function setting(index) {
   switch (index) {
     case 0:
       // await editCheckbox(true, "notifications-optout-form");
+      await editMailNotification(true);
       await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(true, "send_new_direct_text_email");
       await editCheckbox(true, "send_shared_tweet_email");
@@ -157,21 +160,46 @@ async function editCheckbox(toggle, id) {
   console.log("edited : " + id);
 }
 
+async function editCheckboxName(toggle, name) {
+  const elem = await driver.findElement(By.xpath('//input[@name=\"' + name + '\"]'));
+  await elem.getAttribute('checked').then(function(val) {
+    var bVal = Boolean(val);
+    if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
+      elem.click();
+      if (isChangedSettings != true) {
+        isChangedSettings = true;
+      }
+    }
+  })
+  console.log("edited : " + id);
+}
+
 async function editDropdown(toggle, id,val) {
   const elem = await driver.findElement(By.xpath('//select[@data-attribute=\"' + id + '\"]'));
   await elem.sendKeys(val).catch(function(err){
     console.log("dropdown error");
   })
-  // await elem.getAttribute('checked').then(function(val) {
-  //   var bVal = Boolean(val);
-  //   if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
-  //     elem.click();
-  //     if (isChangedSettings != true) {
-  //       isChangedSettings = true;
-  //     }
-  //   }
-  // })
 }
+
+async function editMailNotification(toggle) {
+  var currentSettings = true;
+  await driver.findElement(By.xpath('//span[@id="notifications-global-off"]')).catch(function(err){
+    currentSettings = false;
+  })
+  console.log("mail notifications " + currentSettings + " : " + toggle);
+  if((currentSettings == true && toggle == false) || (currentSettings == false && toggle == true)){
+    if(currentSettings == true){
+      console.log("current : " + currentSettings);
+      await driver.findElement(By.xpath('//span[@id="notifications-global-off"]')).click();
+    }else {
+      console.log("current : " + currentSettings);
+      await driver.findElement(By.xpath('//span[@id="notifications-global-on"]')).click();
+    }
+  }
+
+}
+
+
 
 
 async function saveSettings(confirm) {
