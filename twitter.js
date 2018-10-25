@@ -9,6 +9,7 @@ const async = require('async');
 let driver;
 var username;
 var password;
+var isChangedSettings = false;
 
 async function main() {
   driver = await new webdriver.Builder()
@@ -25,32 +26,183 @@ async function main() {
 }
 
 async function setting(index) {
+  isChangedSettings = false;
+
+  //==========================================
+  // privacy and security
+  //==========================================
   await driver.get('http://twitter.com/settings/safety');
-
-
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="user_protected"]'), 1000)));
   await new Promise(resolve => setTimeout(resolve, 2000));
+  switch (index) {
+    case 0:
+      await editCheckbox(false, "user_protected");
+      await editCheckbox(true, "user_geo_enabled");
+      await editCheckbox(true, "user_discoverable_by_email");
+      await editCheckbox(true, "user_mobile_discoverable");
+      await editCheckbox(true, "allow_media_tagging_none");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_dms_from_anyone");
+      await editCheckbox(true, "allow_dm_receipts");
+      await editCheckbox(false, "user_nsfw_view");
+      await editCheckbox(true, "user_nsfw_user");
 
-  // user protected
-  const user_protected = driver.findElement(By.xpath('//input[@id="user_protected"]'));
-  await user_protected.getAttribute('value').then(function(text){
-    console.log("aa : " + text);
-  })
-  // await console.log("userprotected : " + user_protected.getAttribute('value'));
-  if (user_protected.getAttribute('value') == 0) {
-    await driver.findElement(By.xpath('//input[@id="user_protected"]')).click();
+      break;
+
+    case 1:
+
+    default:
+
+  }
+  if (isChangedSettings == true) {
+    await saveSettings();
   }
 
-
-  // save settings
+  //==========================================
+  // privacy and security (personalization)
+  //==========================================
+  await driver.get('https://twitter.com/settings/personalization');
   await new Promise(resolve => setTimeout(resolve, 500));
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="allow_ads_personalization"]'), 1000)));
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
+  switch (index) {
+    case 0:
+      await editCheckbox(true, "allow_ads_personalization");
+      await editCheckbox(true, "allow_logged_out_device_personalization");
+      await editCheckbox(true, "allow_location_history_personalization");
+      await editCheckbox(true, "use_cookie_personalization");
+      await editCheckbox(true, "allow_sharing_data_for_third_party_personalization");
+      break;
+    default:
+  }
+  if (isChangedSettings == true) {
+    await saveSettings();
+  }
+
+  //==========================================
+  // emain notifications
+  //==========================================
+  await driver.get('https://twitter.com/settings/email_notifications');
+  await new Promise(resolve => setTimeout(resolve, 500));
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="send_network_activity_email"]'), 1000)));
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
+  switch (index) {
+    case 0:
+      // await editCheckbox(true, "notifications-optout-form");
+      await editCheckbox(true, "send_network_activity_email");
+      await editCheckbox(true, "send_new_direct_text_email");
+      await editCheckbox(true, "send_shared_tweet_email");
+      await editDropdown(true,"network_digest_schedule",'3');
+      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+
+      await editCheckbox(true, "performance_digest_schedule");
+      await editCheckbox(true, "send_email_newsletter");
+      await editCheckbox(true, "send_activation_email");
+      await editCheckbox(true, "send_resurrection_email_1");
+      await editCheckbox(true, "send_partner_email");
+      await editCheckbox(true, "send_survey_email");
+      await editCheckbox(true, "send_follow_recs_email");
+      await editCheckbox(true, "send_similar_people_email");
+      await editCheckbox(true, "send_smb_sales_marketing_email");
+      break;
+    default:
+  }
+  if (isChangedSettings == true) {
+    await saveSettings();
+  }
+
+  //==========================================
+  // notifications timeline
+  //==========================================
+  await driver.get('https://twitter.com/settings/notifications_timeline');
+  await new Promise(resolve => setTimeout(resolve, 500));
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="following_filter_enabled"]'), 1000)));
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
+  switch (index) {
+    case 0:
+      await editCheckbox(true, "following_filter_enabled");
+      await editCheckbox(true, "filter_not_followed_by_enabled");
+      await editCheckbox(true, "filter_new_users_enabled");
+      await editCheckbox(true, "filter_default_profile_image_enabled");
+      await editCheckbox(true, "filter_no_confirmed_email_enabled");
+      await editCheckbox(true, "filter_no_confirmed_phone_enabled");
+      await editCheckbox(true, "quality_filter_enabled");
+      break;
+    default:
+  }
+  if (isChangedSettings == true) {
+    await saveSettings();
+  }
+
+}
+
+
+//==========================================
+// privacy settings
+//==========================================
+async function editCheckbox(toggle, id) {
+  const elem = await driver.findElement(By.xpath('//input[@id=\"' + id + '\"]'));
+  await elem.getAttribute('checked').then(function(val) {
+    var bVal = Boolean(val);
+    if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
+      elem.click();
+      if (isChangedSettings != true) {
+        isChangedSettings = true;
+      }
+    }
+  })
+  console.log("edited : " + id);
+}
+
+async function editDropdown(toggle, id,val) {
+  const elem = await driver.findElement(By.xpath('//select[@data-attribute=\"' + id + '\"]'));
+  await elem.sendKeys(val).catch(function(err){
+    console.log("dropdown error");
+  })
+  // await elem.getAttribute('checked').then(function(val) {
+  //   var bVal = Boolean(val);
+  //   if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
+  //     elem.click();
+  //     if (isChangedSettings != true) {
+  //       isChangedSettings = true;
+  //     }
+  //   }
+  // })
+}
+
+
+async function saveSettings() {
+  // save settings
+  await new Promise(resolve => setTimeout(resolve, 1500));
   await driver.findElement(By.xpath("//button[@id='settings_save']")).click();
 
-  const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']"));
-  await auth_pass.sendKeys(password);
+  const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']")).then(function(val) {
+
+  }).catch(function(err) {
+    console.log("save error");
+    isChangedSettings = false;
+    return;
+  });
+
+  await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(password).catch(function(err){
+    return;
+  })
   // await new Promise(resolve => setTimeout(resolve, 500));
-  await auth_pass.sendKeys(Key.ENTER);
+  await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(Key.ENTER).catch(function(err){
+    return;
+  })
+
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch(function(err){
+    console.log("save not completed");
+  })
+  console.log("save complete");
+  // await driver.await(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000)));
+  isChangedSettings = false;
 }
+
 
 
 exports.login = function(user, pass) {
