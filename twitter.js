@@ -55,7 +55,7 @@ async function setting(index) {
 
   }
   if (isChangedSettings == true) {
-    await saveSettings();
+    await saveSettings(true);
   }
 
   //==========================================
@@ -77,7 +77,7 @@ async function setting(index) {
     default:
   }
   if (isChangedSettings == true) {
-    await saveSettings();
+    await saveSettings(false);
   }
 
   //==========================================
@@ -110,7 +110,7 @@ async function setting(index) {
     default:
   }
   if (isChangedSettings == true) {
-    await saveSettings();
+    await saveSettings(false);
   }
 
   //==========================================
@@ -134,7 +134,7 @@ async function setting(index) {
     default:
   }
   if (isChangedSettings == true) {
-    await saveSettings();
+    await saveSettings(false);
   }
 
 }
@@ -174,33 +174,47 @@ async function editDropdown(toggle, id,val) {
 }
 
 
-async function saveSettings() {
+async function saveSettings(confirm) {
   // save settings
   await new Promise(resolve => setTimeout(resolve, 1500));
   await driver.findElement(By.xpath("//button[@id='settings_save']")).click();
 
-  const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']")).then(function(val) {
+  if(confirm == true){
+    const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']"));
+    await auth_pass.sendKeys(password);
+    await auth_pass.sendKeys(Key.ENTER);
+    await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000)));
+  }
+  // const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']")).then(function(val) {
+  //   val.sendKeys(password);
+  // }).then(function(val2){
+  //   val.sendKeys(Key.ENTER);
+  // }).then(function(val3){
+  //   driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch(function(err){
+  //     return;
+  //   })
+  // }) .catch(function(err) {
+  //   console.log("save error");
+  //   isChangedSettings = false;
+  // });
 
-  }).catch(function(err) {
-    console.log("save error");
-    isChangedSettings = false;
-    return;
-  });
 
-  await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(password).catch(function(err){
-    return;
-  })
-  // await new Promise(resolve => setTimeout(resolve, 500));
-  await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(Key.ENTER).catch(function(err){
-    return;
-  })
 
-  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch(function(err){
-    console.log("save not completed");
-  })
-  console.log("save complete");
-  // await driver.await(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000)));
-  isChangedSettings = false;
+  // await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(password).catch(function(err){
+  //   return;
+  // })
+  // // await new Promise(resolve => setTimeout(resolve, 500));
+  // await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(Key.ENTER).catch(function(err){
+  //   return;
+  // })
+  //
+  // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch(function(err){
+  //   console.log("save not completed");
+  //   return;
+  // })
+  // console.log("save complete");
+  // // await driver.await(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000)));
+  // isChangedSettings = false;
 }
 
 
