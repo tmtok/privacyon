@@ -1,0 +1,16 @@
+{
+  "name": "privacyon",
+  "version": "0.0.1",
+  "engine": {
+    "node": "v7.10.1",
+    "npm": "4.2.0"
+  },
+  "dependencies": {
+    "express": "*",
+    "http": "*",
+    "socket.io": "*",
+    "selenium-webdriver": "*",
+    "expect.js": "*",
+    "async": "*"
+  }
+}

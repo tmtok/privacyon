@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+        <link href="./css/lifestylesettingfinished.css" rel="stylesheet" type="text/css"/>
+        <meta content="Launchpad by Anima" name="author">
+        </meta>
+    </head>
+    <body style="margin: 0;
+ background: rgba(255, 255, 255, 1.0);">
+        <input id="anPageName" name="page" type="hidden" value="lifestylesettingfinished"/>
+        <form action="none" class="lifestylesettingfinished" method="post" name="none">
+            <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                <div class="navigation">
+                    <div class="backgroundblur">
+                    </div>
+                    <div class="mynetlifestyle">
+                        My Netlifestyle
+                    </div>
+                </div>
+                <div class="u30cdu30c3u30c8u306fu81eau5206u306eu6b32u3057u3044u60c5u5831u304cu3042u3063u305fu3068u304du306b">
+                    ネットは自分の欲しい情報があったときに<br />その都度検索をして手に入れたい。<br />適度にニュースアプリのトップ記事を見て、<br />情報を手に入れる
+                </div>
+                <div class="safetyfirstlogo">
+                    <img anima-src="./img/lifestylesettingfinished-u6955u5186u5f62255@2x.png" class="u6955u5186u5f62255" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <div class="safetyfirst">
+                        <div class="background">
+                        </div>
+                        <div class="u30a2u30fcu30c8u30efu30fcu30af1">
+                            <div class="u7de8u96c6u30e2u30fcu30c9">
+                                <div class="u30b0u30ebu30fcu30d7u5316438">
+                                    <img anima-src="./img/lifestylesettingfinished-u30d1u30b9541@2x.png" class="u30d1u30b9541" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                                    <img anima-src="./img/lifestylesettingfinished-u30d1u30b9542@2x.png" class="u30d1u30b9542" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="safetyfirst1">
+                        Safety First
+                    </div>
+                </div>
+                <a href="login.html">
+                    <div class="u5909u66f4u3059u308b">
+                        <div class="u9577u65b9u5f62129">
+                        </div>
+                        <div class="u5909u66f4u3059u308b1">
+                            変更する
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </form>
+        <!-- Scripts -->
+        <script>
+            anima_isHidden = function(e) {
+                if (!(e instanceof HTMLElement)) return !1;
+                if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
+                return !1;
+            };
+            anima_loadAsyncSrcForTag = function(tag) {
+                var elements = document.getElementsByTagName(tag);
+                var toLoad = [];
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var src = e.getAttribute("src");
+                    var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+                    if (loaded) continue;
+                    var asyncSrc = e.getAttribute("anima-src");
+                    if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+                    if (anima_isHidden(e)) continue;
+                    toLoad.push(e);
+                }
+                toLoad.sort(function(a, b) {
+                    return anima_getTop(a) - anima_getTop(b);
+                });
+                for (var i = 0; i < toLoad.length; i++) {
+                    var e = toLoad[i];
+                    var asyncSrc = e.getAttribute("anima-src");
+                    e.setAttribute("src", asyncSrc);
+                }
+            };
+            anima_pauseHiddenVideos = function(tag) {
+                var elements = document.getElementsByTagName("video");
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
+                    var isHidden = anima_isHidden(e);
+                    if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
+                        e.play();
+                    } else if (isPlaying && isHidden) {
+                        e.pause();
+                    }
+                }
+            };
+            anima_loadAsyncSrc = function(tag) {
+                anima_loadAsyncSrcForTag("img");
+                anima_loadAsyncSrcForTag("iframe");
+                anima_loadAsyncSrcForTag("video");
+                anima_pauseHiddenVideos();
+            };
+            var anima_getTop = function(e) {
+                var top = 0;
+                do {
+                    top += e.offsetTop || 0;
+                    e = e.offsetParent;
+                } while (e);
+                return top;
+            };
+            anima_loadAsyncSrc();
+            anima_old_onResize = window.onresize;
+            anima_new_onResize = undefined;
+            anima_updateOnResize = function() {
+                if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
+                    anima_new_onResize = function(x) {
+                        if (anima_old_onResize != undefined) anima_old_onResize(x);
+                        anima_loadAsyncSrc();
+                    };
+                    window.onresize = anima_new_onResize;
+                    setTimeout(function() {
+                        anima_updateOnResize();
+                    }, 3000);
+                }
+            };
+            anima_updateOnResize();
+            setTimeout(function() {
+                anima_loadAsyncSrc();
+            }, 200);
+        </script>
+        <!-- End of Scripts -->
+    </body>
+</html>

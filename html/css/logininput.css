@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
+@font-face {
+  font-family: "Monaco";
+  src: url('../fonts/mono.ttf') format("truetype");
+}
+@font-face {
+  font-family: "AntipastoPro-DemiBold";
+  src: url('../fonts/Zetafonts - AntipastoPro-DemiBold.otf') format("opentype");
+}
+
+.logininput {
+  width               : 100%;
+  min-width           : 375px;
+  height              : 100vh;
+  min-height          : 667px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+textarea:focus, input:focus {
+  outline             : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.logininput .logininput1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 134px;
+  height              : 361px;
+  width               : 343px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .faceform {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 92px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 54px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .faceform .mailaddress {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 6px;
+  height              : 17px;
+  width               : 84px;
+  position            : absolute;
+  margin              : 0;
+  left                : 31px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .faceform .u7dda141 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 35px;
+  height              : 1px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .faceform .u7dda142 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 91px;
+  height              : 1px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .faceform .textmailaddress {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : -7px;
+  height              : 30px;
+  width               : 85px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 17.0px;
+  border              : 0;
+}
+.logininput .logininput1 .faceform .textmailaddress::placeholder {
+  color               : rgba(0, 0, 0, 0.6);
+}
+.logininput .logininput1 .faceform .textpassword {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 49px;
+  height              : 30px;
+  width               : 64px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 17.0px;
+  border              : 0;
+}
+.logininput .logininput1 .faceform .textpassword::placeholder {
+  color               : rgba(0, 0, 0, 0.6);
+}
+.logininput .logininput1 .twitterform {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 132px;
+  height              : 93px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 54px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .twitterform .u7dda1412 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 36px;
+  height              : 1px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .twitterform .u7dda1422 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 92px;
+  height              : 1px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .twitterform .textpassword {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 49px;
+  height              : 30px;
+  width               : 64px;
+  position            : absolute;
+  margin              : 0;
+  left                : 2px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 17.0px;
+  border              : 0;
+}
+.logininput .logininput1 .twitterform .textpassword::placeholder {
+  color               : rgba(0, 0, 0, 0.6);
+}
+.logininput .logininput1 .twitterform .textusername {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : -7px;
+  height              : 30px;
+  width               : 67px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 17.0px;
+  border              : 0;
+}
+.logininput .logininput1 .twitterform .textusername::placeholder {
+  color               : rgba(0, 0, 0, 0.6);
+}
+.logininput .logininput1 .googleform {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 268px;
+  height              : 93px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 54px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .googleform .u7dda1413 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 36px;
+  height              : 1px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .googleform .u7dda1423 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 92px;
+  height              : 1px;
+  width               : 289px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .googleform .textpassword {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 49px;
+  height              : 30px;
+  width               : 64px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 17.0px;
+  border              : 0;
+}
+.logininput .logininput1 .googleform .textpassword::placeholder {
+  color               : rgba(0, 0, 0, 0.6);
+}
+.logininput .logininput1 .googleform .textmailadress {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : -7px;
+  height              : 30px;
+  width               : 76px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica-Light", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 17.0px;
+  border              : 0;
+}
+.logininput .logininput1 .googleform .textmailadress::placeholder {
+  color               : rgba(0, 0, 0, 0.6);
+}
+.logininput .logininput1 .logo {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 19px;
+  height              : 313px;
+  width               : 37px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .facebooklogo {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 37px;
+  width               : 37px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .facebooklogo .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 37px;
+  width               : 37px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .facebooklogo .u30d1u30b910 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 37px;
+  width               : 37px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .facebooklogo .u30d1u30b911 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : 30px;
+  width               : 17px;
+  position            : absolute;
+  margin              : 0;
+  left                : 14px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .twitter {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 141px;
+  height              : 29px;
+  width               : 36px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 278px;
+  height              : 35px;
+  width               : 34px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 35px;
+  width               : 34px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 35px;
+  width               : 34px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 14px;
+  height              : 16px;
+  width               : 18px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group5 .combinedshape {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 16px;
+  width               : 18px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group51 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 20px;
+  height              : 15px;
+  width               : 26px;
+  position            : absolute;
+  margin              : 0;
+  left                : 2px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group51 .group54 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 15px;
+  width               : 26px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group52 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 8px;
+  height              : 16px;
+  width               : 8px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group52 .group54 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 16px;
+  width               : 8px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group53 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 14px;
+  width               : 28px;
+  position            : absolute;
+  margin              : 0;
+  left                : 2px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .logininput1 .logo .google .google1 .group53 .group54 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 14px;
+  width               : 28px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .navigation {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 64px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .navigation .backgroundblur {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 64px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .navigation .u30d1u30b9505 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 32px;
+  height              : 16px;
+  width               : 16px;
+  position            : absolute;
+  margin              : 0;
+  left                : 10px;
+  -ms-transform       : rotate(180deg); /* IE 9 */
+  -webkit-transform   : rotate(180deg); /* Chrome, Safari, Opera */
+  transform           : rotate(180deg);
+}
+.logininput .navigation .signin {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 157px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Roboto", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 20.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 24.0px;
+}
+.logininput .signeup {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 583px;
+  height              : 55px;
+  width               : 343px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  transition          : all 0.2s ease-in-out;
+}
+.logininput .signeup:hover {
+  box-shadow          : 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+.logininput .signeup .signuphaikei {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 55px;
+  width               : 343px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  transition          : all 0.2s ease-in-out;
+}
+.logininput .signeup .signuphaikei:hover {
+  transform           : scale(1.1);
+}
+.logininput .signeup .signuphaikei .u9577u65b9u5f6282 {
+  background-color    : rgba(0, 111, 255, 1.0);
+  top                 : 0px;
+  height              : 55px;
+  width               : 343px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 27px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .signeup .signup {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 18px;
+  height              : 19px;
+  width               : 59px;
+  position            : absolute;
+  margin              : 0;
+  left                : 144px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.logininput .signeup .signup .signup1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica-Bold", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 19.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}

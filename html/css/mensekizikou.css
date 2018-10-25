@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
+@font-face {
+  font-family: "Monaco";
+  src: url('../fonts/mono.ttf') format("truetype");
+}
+@font-face {
+  font-family: "AntipastoPro-DemiBold";
+  src: url('../fonts/Zetafonts - AntipastoPro-DemiBold.otf') format("opentype");
+}
+
+.mensekizikou {
+  width               : 100%;
+  min-width           : 375px;
+  height              : 100vh;
+  min-height          : 667px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.mensekizikou .mensekizikoushirohaikei {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 79px;
+  height              : 509px;
+  width               : 295px;
+  position            : absolute;
+  margin              : 0;
+  left                : 40px;
+  border-radius       : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 154px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 64px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  transition          : all 0.2s ease-in-out;
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 14.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 21.0px;
+}
+.mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042:hover {
+  transform           : scale(1.1);
+}
+.mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042 .span1 {
+  
+}
+.mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042 .span2 {
+  
+}
+.mensekizikou .menseki {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 106px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 134px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 38.0px;
+}
+.mensekizikou .batsubutton {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 502px;
+  height              : 52px;
+  width               : 52px;
+  position            : absolute;
+  margin              : 0;
+  left                : 162px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  transition          : all 0.2s ease-in-out;
+}
+.mensekizikou .batsubutton:hover {
+  transform           : scale(1.1);
+}
+.mensekizikou .batsubutton .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 52px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.mensekizikou .batsubutton .bluebutton2 {
+  background-color    : rgba(255, 76, 108, 1.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 52px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 26px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.mensekizikou .batsubutton .plus {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 19px;
+  height              : 14px;
+  width               : 14px;
+  position            : absolute;
+  margin              : 0;
+  left                : 19px;
+  -ms-transform       : rotate(45deg); /* IE 9 */
+  -webkit-transform   : rotate(45deg); /* Chrome, Safari, Opera */
+  transform           : rotate(45deg);
+}
+.mensekizikou .kakuninshimashita {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 466px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 157px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 15.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 23.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}

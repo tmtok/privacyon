@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
+@font-face {
+  font-family: "Monaco";
+  src: url('../fonts/mono.ttf') format("truetype");
+}
+@font-face {
+  font-family: "AntipastoPro-DemiBold";
+  src: url('../fonts/Zetafonts - AntipastoPro-DemiBold.otf') format("opentype");
+}
+
+.setting {
+  width               : 100%;
+  min-width           : 375px;
+  height              : 100vh;
+  min-height          : 667px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.setting .key1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 242px;
+  height              : 189px;
+  width               : 131px;
+  position            : absolute;
+  margin              : 0;
+  left                : 123px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 189px;
+  width               : 131px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 188px;
+  width               : 131px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 56px;
+  height              : 132px;
+  width               : 131px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 132px;
+  width               : 131px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9512 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 87px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9513 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 75px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9514 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 29px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9515 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 18px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 20px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9516 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 63px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9517 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 107px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 20px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9518 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 50px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9519 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 44px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 121px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9520 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 65px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9521 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 3px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 77px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9522 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 56px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 123px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9523 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 115px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 29px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9524 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 52px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9525 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 38px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9526 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 27px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 11px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9527 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 98px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 12px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9528 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 33px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9529 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 103px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 108px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9530 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 22px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 108px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9531 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 69px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 123px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9532 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 5px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 40px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9533 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 93px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 116px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9534 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 81px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 121px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9535 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 111px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 100px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9536 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 124px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 65px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9537 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 124px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 53px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9538 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 121px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 40px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9539 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 122px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 77px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9540 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 118px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 89px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9541 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 89px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .checked .u30b0u30ebu30fcu30d7u5316163 .u30d1u30b9542 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 14px;
+  height              : 7px;
+  width               : 7px;
+  position            : absolute;
+  margin              : 0;
+  left                : 100px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .u30a2u30fcu30c8u30efu30fcu30af8 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 65px;
+  width               : 85px;
+  position            : absolute;
+  margin              : 0;
+  left                : 21px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .u30a2u30fcu30c8u30efu30fcu30af8 .u30a2u30fcu30c8u30efu30fcu30af82 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 64px;
+  width               : 84px;
+  position            : relative;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .key1 .u30b0u30ebu30fcu30d7u5316481 .u30a2u30fcu30c8u30efu30fcu30af8 .u30a2u30fcu30c8u30efu30fcu30af82 .u30d1u30b9470 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 62px;
+  width               : 82px;
+  position            : relative;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .u30d1u30b9511 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 348px;
+  height              : 32px;
+  width               : 42px;
+  position            : absolute;
+  margin              : 0;
+  left                : 167px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .settingu2026 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 201px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 145px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Monaco", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 25.0px;
+}
+.setting .navigation {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 64px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .navigation .backgroundblur {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 64px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .navigation .u30d1u30b9505 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 32px;
+  height              : 16px;
+  width               : 16px;
+  position            : absolute;
+  margin              : 0;
+  left                : 10px;
+  -ms-transform       : rotate(180deg); /* IE 9 */
+  -webkit-transform   : rotate(180deg); /* Chrome, Safari, Opera */
+  transform           : rotate(180deg);
+}
+.setting .navigation .setting1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : 24px;
+  width               : 64px;
+  position            : absolute;
+  margin              : 0;
+  left                : 157px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .navigation .setting1 .application {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 24px;
+  width               : 64px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.setting .navigation .setting1 .application .setting2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Roboto", Helvetica, Arial, serif;
+  font-weight         : 500;
+  font-style          : normal;
+  font-size           : 20.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 24.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
