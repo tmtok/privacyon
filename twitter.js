@@ -36,22 +36,89 @@ async function setting(index) {
   await new Promise(resolve => setTimeout(resolve, 2000));
   switch (index) {
     case 0:
-      await editCheckbox(false, "user_protected");
-      await editCheckbox(true, "user_geo_enabled");
-      await editCheckbox(true, "user_discoverable_by_email");
-      await editCheckbox(true, "user_mobile_discoverable");
+      await editCheckbox(true, "user_protected");
+      await editCheckbox(false, "user_geo_enabled");
+      await editCheckbox(false, "user_discoverable_by_email");
+      await editCheckbox(false, "user_mobile_discoverable");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
       await editCheckbox(true, "allow_media_tagging_none");
       // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
-      await editCheckbox(true, "allow_dms_from_anyone");
-      await editCheckbox(true, "allow_dm_receipts");
+      await editCheckbox(true, "allow_contributor_request_none");
+      await editCheckbox(false, "allow_dms_from_anyone");
+      await editCheckbox(false, "allow_dm_receipts");
       await editCheckboxName(true, "search-settings-nsfw");
-      await editCheckboxName(true, "search-settings-blocked-accounts");      
-      await editCheckbox(false, "user_nsfw_view");
-      await editCheckbox(true, "user_nsfw_user");
-
+      await editCheckboxName(true, "search-settings-blocked-accounts");
+      await editCheckbox(true, "user_nsfw_view");
+      await editCheckbox(false, "user_nsfw_user");
       break;
 
     case 1:
+      await editCheckbox(true, "user_protected");
+      await editCheckbox(false, "user_geo_enabled");
+      await editCheckbox(true, "user_discoverable_by_email");
+      await editCheckbox(true, "user_mobile_discoverable");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_media_tagging_none");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_contributor_request_none");
+      await editCheckbox(false, "allow_dms_from_anyone");
+      await editCheckbox(true, "allow_dm_receipts");
+      await editCheckboxName(true, "search-settings-nsfw");
+      await editCheckboxName(true, "search-settings-blocked-accounts");
+      await editCheckbox(true, "user_nsfw_view");
+      await editCheckbox(false, "user_nsfw_user");
+      break;
+
+    case 2:
+      await editCheckbox(false, "user_protected");
+      await editCheckbox(false, "user_geo_enabled");
+      await editCheckbox(true, "user_discoverable_by_email");
+      await editCheckbox(true, "user_mobile_discoverable");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_media_tagging_none");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_contributor_request_none");
+      await editCheckbox(false, "allow_dms_from_anyone");
+      await editCheckbox(false, "allow_dm_receipts");
+      await editCheckboxName(true, "search-settings-nsfw");
+      await editCheckboxName(true, "search-settings-blocked-accounts");
+      await editCheckbox(false, "user_nsfw_view");
+      await editCheckbox(false, "user_nsfw_user");
+      break;
+
+    case 3:
+      await editCheckbox(false, "user_protected");
+      await editCheckbox(true, "user_geo_enabled");
+      await editCheckbox(false, "user_discoverable_by_email");
+      await editCheckbox(false, "user_mobile_discoverable");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_media_tagging_none");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_contributor_request_none");
+      await editCheckbox(false, "allow_dms_from_anyone");
+      await editCheckbox(false, "allow_dm_receipts");
+      await editCheckboxName(false, "search-settings-nsfw");
+      await editCheckboxName(true, "search-settings-blocked-accounts");
+      await editCheckbox(false, "user_nsfw_view");
+      await editCheckbox(false, "user_nsfw_user");
+      break;
+
+    case 4:
+      await editCheckbox(false, "user_protected");
+      await editCheckbox(false, "user_geo_enabled");
+      await editCheckbox(true, "user_discoverable_by_email");
+      await editCheckbox(true, "user_mobile_discoverable");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_media_tagging_none");
+      // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
+      await editCheckbox(true, "allow_contributor_request_none");
+      await editCheckbox(true, "allow_dms_from_anyone");
+      await editCheckbox(true, "allow_dm_receipts");
+      await editCheckboxName(false, "search-settings-nsfw");
+      await editCheckboxName(true, "search-settings-blocked-accounts");
+      await editCheckbox(false, "user_nsfw_view");
+      await editCheckbox(false, "user_nsfw_user");
+      break;
 
     default:
 
@@ -70,6 +137,38 @@ async function setting(index) {
 
   switch (index) {
     case 0:
+      await editCheckbox(false, "allow_ads_personalization");
+      await editCheckbox(false, "allow_logged_out_device_personalization");
+      await editCheckbox(false, "allow_location_history_personalization");
+      await editCheckbox(false, "use_cookie_personalization");
+      await editCheckbox(false, "allow_sharing_data_for_third_party_personalization");
+      break;
+
+    case 1:
+      await editCheckbox(false, "allow_ads_personalization");
+      await editCheckbox(false, "allow_logged_out_device_personalization");
+      await editCheckbox(false, "allow_location_history_personalization");
+      await editCheckbox(false, "use_cookie_personalization");
+      await editCheckbox(false, "allow_sharing_data_for_third_party_personalization");
+      break;
+
+    case 2:
+      await editCheckbox(true, "allow_ads_personalization");
+      await editCheckbox(true, "allow_logged_out_device_personalization");
+      await editCheckbox(false, "allow_location_history_personalization");
+      await editCheckbox(true, "use_cookie_personalization");
+      await editCheckbox(false, "allow_sharing_data_for_third_party_personalization");
+      break;
+
+    case 3:
+      await editCheckbox(true, "allow_ads_personalization");
+      await editCheckbox(true, "allow_logged_out_device_personalization");
+      await editCheckbox(true, "allow_location_history_personalization");
+      await editCheckbox(true, "use_cookie_personalization");
+      await editCheckbox(true, "allow_sharing_data_for_third_party_personalization");
+      break;
+
+    case 4:
       await editCheckbox(true, "allow_ads_personalization");
       await editCheckbox(true, "allow_logged_out_device_personalization");
       await editCheckbox(true, "allow_location_history_personalization");
@@ -83,7 +182,7 @@ async function setting(index) {
   }
 
   //==========================================
-  // emain notifications
+  // email notifications
   //==========================================
   await driver.get('https://twitter.com/settings/email_notifications');
   await new Promise(resolve => setTimeout(resolve, 500));
@@ -92,23 +191,21 @@ async function setting(index) {
 
   switch (index) {
     case 0:
-      // await editCheckbox(true, "notifications-optout-form");
       await editMailNotification(true);
-      await editCheckbox(true, "send_network_activity_email");
-      await editCheckbox(true, "send_new_direct_text_email");
-      await editCheckbox(true, "send_shared_tweet_email");
-      await editDropdown(true,"network_digest_schedule",'3');
+      await editCheckbox(false, "send_network_activity_email");
+      await editCheckbox(false, "send_new_direct_text_email");
+      await editCheckbox(false, "send_shared_tweet_email");
+      await editDropdown(false, "network_digest_schedule", '1');
       // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
-
-      await editCheckbox(true, "performance_digest_schedule");
-      await editCheckbox(true, "send_email_newsletter");
-      await editCheckbox(true, "send_activation_email");
-      await editCheckbox(true, "send_resurrection_email_1");
-      await editCheckbox(true, "send_partner_email");
-      await editCheckbox(true, "send_survey_email");
-      await editCheckbox(true, "send_follow_recs_email");
-      await editCheckbox(true, "send_similar_people_email");
-      await editCheckbox(true, "send_smb_sales_marketing_email");
+      await editCheckbox(false, "performance_digest_schedule");
+      await editCheckbox(false, "send_email_newsletter");
+      await editCheckbox(false, "send_activation_email");
+      await editCheckbox(false, "send_resurrection_email_1");
+      await editCheckbox(false, "send_partner_email");
+      await editCheckbox(false, "send_survey_email");
+      await editCheckbox(false, "send_follow_recs_email");
+      await editCheckbox(false, "send_similar_people_email");
+      await editCheckbox(false, "send_smb_sales_marketing_email");
       break;
     default:
   }
@@ -132,7 +229,7 @@ async function setting(index) {
       await editCheckbox(true, "filter_default_profile_image_enabled");
       await editCheckbox(true, "filter_no_confirmed_email_enabled");
       await editCheckbox(true, "filter_no_confirmed_phone_enabled");
-      await editCheckbox(true, "quality_filter_enabled");
+      await editCheckbox(false, "quality_filter_enabled");
       break;
     default:
   }
@@ -171,27 +268,27 @@ async function editCheckboxName(toggle, name) {
       }
     }
   })
-  console.log("edited : " + id);
+  console.log("edited : " + name);
 }
 
-async function editDropdown(toggle, id,val) {
+async function editDropdown(toggle, id, val) {
   const elem = await driver.findElement(By.xpath('//select[@data-attribute=\"' + id + '\"]'));
-  await elem.sendKeys(val).catch(function(err){
+  await elem.sendKeys(val).catch(function(err) {
     console.log("dropdown error");
   })
 }
 
 async function editMailNotification(toggle) {
   var currentSettings = true;
-  await driver.findElement(By.xpath('//span[@id="notifications-global-off"]')).catch(function(err){
+  await driver.findElement(By.xpath('//span[@id="notifications-global-off"]')).catch(function(err) {
     currentSettings = false;
   })
   console.log("mail notifications " + currentSettings + " : " + toggle);
-  if((currentSettings == true && toggle == false) || (currentSettings == false && toggle == true)){
-    if(currentSettings == true){
+  if ((currentSettings == true && toggle == false) || (currentSettings == false && toggle == true)) {
+    if (currentSettings == true) {
       console.log("current : " + currentSettings);
       await driver.findElement(By.xpath('//span[@id="notifications-global-off"]')).click();
-    }else {
+    } else {
       console.log("current : " + currentSettings);
       await driver.findElement(By.xpath('//span[@id="notifications-global-on"]')).click();
     }
@@ -207,7 +304,7 @@ async function saveSettings(confirm) {
   await new Promise(resolve => setTimeout(resolve, 1500));
   await driver.findElement(By.xpath("//button[@id='settings_save']")).click();
 
-  if(confirm == true){
+  if (confirm == true) {
     const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']"));
     await auth_pass.sendKeys(password);
     await auth_pass.sendKeys(Key.ENTER);
