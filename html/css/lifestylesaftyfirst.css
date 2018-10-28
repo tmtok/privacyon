@@ -1,0 +1,874 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500,300');
+
+@font-face {
+  font-family: "Monaco";
+  src: url('../fonts/mono.ttf') format("truetype");
+}
+
+.lifestylesaftyfirst {
+  width               : 100%;
+  min-width           : 375px;
+  height              : 100vh;
+  min-height          : 667px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.lifestylesaftyfirst .u80ccu666fu7070u8272 {
+  background-color    : rgba(229, 229, 229, 0.5);
+  top                 : 0px;
+  height              : 667px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.82;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 70px;
+  height              : 527px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 28px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u8a73u7d30u67a01 {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 527px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u623bu308b {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 475px;
+  height              : 52px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  transition          : all 0.2s ease-in-out;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u623bu308b:hover {
+  box-shadow          : 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u623bu308b .u9577u65b9u5f621157 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 52px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u623bu308b .u623bu308b2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 18px;
+  height              : 12px;
+  width               : 24px;
+  position            : absolute;
+  margin              : 0;
+  left                : 148px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u623bu308b .u623bu308b2 .u623bu308b1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 12.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 18.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 419px;
+  height              : 42px;
+  width               : 208px;
+  position            : absolute;
+  margin              : 0;
+  left                : 56px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  transition          : all 0.2s ease-in-out;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1:hover {
+  transform           : scale(1.1);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 42px;
+  width               : 208px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 6px;
+  height              : 29px;
+  width               : 188px;
+  position            : absolute;
+  margin              : 0;
+  left                : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  transition          : all 0.2s ease-in-out;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b:hover {
+  transform           : scale(1.1);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b .u9577u65b9u5f62129 {
+  background-color    : rgba(232, 86, 42, 1.0);
+  top                 : 0px;
+  height              : 29px;
+  width               : 188px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 14px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b2 {
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 10px;
+    height              : auto;
+    width               : 127px;
+    position            : absolute;
+    margin              : 0;
+    left                : 39px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+    font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+    font-size           : 10.0px;
+    color               : rgba(255, 255, 255, 1.0);
+    text-align          : left;
+    line-height         : 15.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u8457u540du4ebau3084u6709u540du4ebau3088u308au3082u53cbu4ebau306eu60c5u5831u3092u898bu305fu3044u3002 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 212px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 26px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 11.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 17.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 362px;
+  height              : 30px;
+  width               : 138px;
+  position            : absolute;
+  margin              : 0;
+  left                : 103px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .a1tuchi {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 95px;
+  position            : absolute;
+  margin              : 0;
+  left                : 43px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .a1tuchi .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 95px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .a1tuchi .groupcopy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 95px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .a1tuchi .groupcopy .radio {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 48px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .a1tuchi .groupcopy .off {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : 29px;
+  position            : absolute;
+  margin              : 0;
+  left                : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 9.0px;
+  color               : rgba(77, 77, 77, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .a1tuchi .groupcopy .radio1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 48px;
+  position            : absolute;
+  margin              : 0;
+  left                : 47px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .a1tuchi .groupcopy .on {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : 29px;
+  position            : absolute;
+  margin              : 0;
+  left                : 56px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 9.0px;
+  color               : rgba(77, 77, 77, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u901au77e5 .u901au77e51 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 12.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 18.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 318px;
+  height              : 30px;
+  width               : 209px;
+  position            : absolute;
+  margin              : 0;
+  left                : 32px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .a1custom {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 95px;
+  position            : absolute;
+  margin              : 0;
+  left                : 114px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .a1custom .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 95px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .a1custom .groupcopy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 95px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .a1custom .groupcopy .radio {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 48px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .a1custom .groupcopy .off {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : 29px;
+  position            : absolute;
+  margin              : 0;
+  left                : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 9.0px;
+  color               : rgba(77, 77, 77, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .a1custom .groupcopy .radio1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 48px;
+  position            : absolute;
+  margin              : 0;
+  left                : 47px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .a1custom .groupcopy .on {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : 29px;
+  position            : absolute;
+  margin              : 0;
+  left                : 56px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 9.0px;
+  color               : rgba(77, 77, 77, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba .u60c5u5831u30abu30b9u30bfu30deu30a4u30ba1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 8px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 12.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 18.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 274px;
+  height              : 30px;
+  width               : 232px;
+  position            : absolute;
+  margin              : 0;
+  left                : 56px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 142px;
+  position            : absolute;
+  margin              : 0;
+  left                : 90px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 142px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 142px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group .radio {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 48px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group .u53cbu4eba {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : 29px;
+  position            : absolute;
+  margin              : 0;
+  left                : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 9.0px;
+  color               : rgba(77, 77, 77, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group .radio1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 48px;
+  position            : absolute;
+  margin              : 0;
+  left                : 47px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group .u8da3u5473u30fbu95a2u5fc3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 5px;
+  height              : auto;
+  width               : 34px;
+  position            : absolute;
+  margin              : 0;
+  left                : 56px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 9.0px;
+  color               : rgba(77, 77, 77, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group .radio2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 48px;
+  position            : absolute;
+  margin              : 0;
+  left                : 94px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group .u5168u54e1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : 29px;
+  position            : absolute;
+  margin              : 0;
+  left                : 103px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W6", Helvetica, Arial, serif;
+  font-size           : 9.0px;
+  color               : rgba(77, 77, 77, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .u6295u7a3fu516cu958bu7bc4u56f21 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 12.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : center;
+  line-height         : 18.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 194px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 194px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 197px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .title {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 140px;
+  width               : 320px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 61px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 122px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
+  font-size           : 15.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : justify;
+  line-height         : 23.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .u5b89u5fc3u30d5u30a1u30fcu30b9u30c8 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 29px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 74px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : justify;
+  line-height         : 38.0px;
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 85px;
+  height              : 112px;
+  width               : 112px;
+  position            : absolute;
+  margin              : 0;
+  left                : 104px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  margin-top          : -5px; //tm
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 110px;
+  height              : 63px;
+  width               : 63px;
+  position            : absolute;
+  margin              : 0;
+  left                : 128px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst2 .background1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 63px;
+  width               : 63px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst2 .u30a2u30fcu30c8u30efu30fcu30af1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 62px;
+  width               : 62px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst2 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 61px;
+  width               : 62px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst2 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 61px;
+  width               : 62px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst2 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 .u30d1u30b9541 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 3px;
+  height              : 58px;
+  width               : 60px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestylesaftyfirst .u8a73u7d30u67a0 .a1title .u30bfu30a4u30c8u30eb .saftyfirst2 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 .u30d1u30b9542 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 32px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 24px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}

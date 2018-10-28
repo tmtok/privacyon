@@ -418,6 +418,49 @@ div {
   -o-animation-delay  : 0;
   animation-delay     : 0;
 }
+
+
+
+
+
+.facebook .facebook1 {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.facebook .facebook1 {label {
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.facebook .facebook1 {label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.facebook .facebook1 {input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.facebook .facebook1 { .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.facebook .facebook1 { input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
 @-webkit-keyframes anima-reveal {
   0%
    
