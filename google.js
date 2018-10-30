@@ -18,10 +18,9 @@ async function main(username, password) {
 
   await driver.get('https://www.google.co.jp/')
 
+
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//a[@id="gb_70"]'), 1000)));
   await driver.findElement(By.xpath('//a[@id="gb_70"]')).click();
-
-  console.log("username : " + username + " pass : " + password);
 
   //input username
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="identifierId"]'), 1000)));
@@ -34,10 +33,37 @@ async function main(username, password) {
   await driver.findElement(By.xpath('//input[@name="password" and @type="password"]')).sendKeys(password);
   await driver.findElement(By.xpath('//div[@id="passwordNext"]')).click();
 
+  // await new Promise(resolve => setTimeout(resolve, 1000));
+  // async.whilst(
+  //   function() {
+  //     driver.findElement(By.xpath('//h1[@id="headingText"]')).getText().then(function(text) {
+  //       console.log("text : " + text);
+  //       if(text == "本人であることの確認"){
+  //         return true;
+  //         console.log("auth error : 本人認証が必要です");
+  //       }else if(text == "ようこそ"){
+  //         return false;
+  //       }
+  //     }).catch(function(err) {
+  //     })
+  //   },
+  //   function(callback) {
+  //
+  //   },
+  //   function(err, n) {
+  //     console.log("error whilst : " + err);
+  //   }
+  // );
+  // await driver.findElement(By.xpath('//h1[@id="headingText"]')).getText().then(function(text){
+  //   console.log("text : " + text);
+  //   if(text == "本人であることの確認"){
+  //     console.log("auth error : 本人認証が必要です");
+  //     driver.quit();
+  //   }
+  // }).catch(function(err){
+  //
+  // })
 
-}
-
-async function setting(index){
   await new Promise(resolve => setTimeout(resolve, 1000));
   await driver.get('https://myaccount.google.com/activitycontrols');
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//body[@id="yDmH0d"]'), 1000))).catch(function(err) {
@@ -50,8 +76,45 @@ async function setting(index){
   await editCheckbox(true, 5); // voice activity
   await editCheckbox(true, 3); // youtube search history
   await editCheckbox(false, 4); // youtube play history
+  // await editCheckbox(true,4); // custom ads
   await editCustomAds(true);
-  await driver.quit();
+
+  await driver.get("https://aboutme.google.com/");
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@jsname="Wa08Re"]'), 1000))).catch(function(err) {
+    console.log("aboutme page not found " + err);
+  });
+
+  await driver.findElement(By.xpath('//div[@jsname="Wa08Re"]/content/div')).then(function(e) {
+    e.click();
+  }).catch(function(err) {
+    console.error("cannot click " + err);
+  })
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  // add information
+  await driver.findElement(By.xpath('//div[@id="dwrFZd0"]')).then(function(e) {
+    console.log("cancel add information");
+  }).catch(function(err) {
+    console.log("add information not found ");
+  })
+
+  await driver.findElement(By.xpath('//div[@jsname="LgbsSe"]')).then(function(e) {
+    console.log("found");
+    driver.executeScript("arguments[0].click()", e);
+  }).catch(function(err) {
+    console.log("aaa");
+  })
+
+  await editAboutmeSettings(true, "gender");
+  await editAboutmeSettings(true, "birthday");
+
+
+
+
+
+
+  // await driver.quit();
 }
 
 async function editCheckbox(toggle, sid) {
@@ -98,7 +161,7 @@ async function editCheckbox(toggle, sid) {
   }
 }
 
-async function editCustomAds(toggle){
+async function editCustomAds(toggle) {
   await new Promise(resolve => setTimeout(resolve, 500));
   await driver.get('https://adssettings.google.com/authenticated');
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@jsname="ornU0b"]'), 1000))).catch(function(err) {
@@ -106,9 +169,9 @@ async function editCustomAds(toggle){
   });
   const elem = await driver.findElement(By.xpath('//div[@jsname="ornU0b"]'), 1000);
   var isChecked = toBoolean("false");
-  await elem.getAttribute('aria-checked').then(function(val){
+  await elem.getAttribute('aria-checked').then(function(val) {
     isChecked = toBoolean(val);
-  }).catch(function(err){
+  }).catch(function(err) {
 
   })
 
@@ -142,6 +205,39 @@ async function editCustomAds(toggle){
   }
 }
 
+async function editAboutmeSettings(isPublic, name) {
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  await driver.findElement(By.xpath('//div[@jsname="Nzcbaf" and @data-key="' + name + '"]/div[@role="button"]')).then(function(e) {
+    console.log("find ");
+    driver.executeScript("arguments[0].click()", e);
+  }).catch(function(err) {
+    console.log("error : " + err);
+  })
+
+  var jslog = 15155;
+  if (isPublic) {
+    jslog = 15156;
+  }
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  await driver.findElement(By.xpath('//div[@jslog="' + jslog + '; track:click"]')).then(function(e) {
+    driver.actions({
+      bridge: true
+    }).move({
+      x: 0,
+      y: 0,
+      origin: e
+    }).click().perform();
+    console.log("click");
+    // driver.executeScript("arguments[0].click()", e);
+  }).catch(function(err) {
+    console.log("find anchor : " + err);
+
+  })
+  await new Promise(resolve => setTimeout(resolve, 1000));
+}
+
 
 async function clickConfirmButton(e) {
   try {
@@ -169,8 +265,8 @@ function toBoolean(str) {
 
 
 
-var username = "kihalllllo";
-var password = "ekuadoru";
+var username = "";
+var password = "";
 
 exports.login = function(user, pass) {
   username = user;

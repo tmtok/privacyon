@@ -36,7 +36,7 @@ async function setting(index) {
   await new Promise(resolve => setTimeout(resolve, 2000));
   switch (index) {
     case 0:
-      await editCheckbox(true, "user_protected");
+      await editCheckbox(false, "user_protected");
       await editCheckbox(false, "user_geo_enabled");
       await editCheckbox(false, "user_discoverable_by_email");
       await editCheckbox(false, "user_mobile_discoverable");
@@ -137,7 +137,7 @@ async function setting(index) {
 
   switch (index) {
     case 0:
-      await editCheckbox(false, "allow_ads_personalization");
+      await editCheckbox(true, "allow_ads_personalization");
       await editCheckbox(false, "allow_logged_out_device_personalization");
       await editCheckbox(false, "allow_location_history_personalization");
       await editCheckbox(false, "use_cookie_personalization");
@@ -192,7 +192,7 @@ async function setting(index) {
   switch (index) {
     case 0:
       await editMailNotification(true);
-      await editCheckbox(false, "send_network_activity_email");
+      await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(false, "send_new_direct_text_email");
       await editCheckbox(false, "send_shared_tweet_email");
       await editDropdown(false, "network_digest_schedule", '1');
@@ -223,7 +223,7 @@ async function setting(index) {
 
   switch (index) {
     case 0:
-      await editCheckbox(true, "following_filter_enabled");
+      await editCheckbox(false, "following_filter_enabled");
       await editCheckbox(true, "filter_not_followed_by_enabled");
       await editCheckbox(true, "filter_new_users_enabled");
       await editCheckbox(true, "filter_default_profile_image_enabled");
