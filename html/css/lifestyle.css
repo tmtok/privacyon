@@ -1,22 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500,300');
 
 @font-face {
   font-family: "Monaco";
   src: url('../fonts/mono.ttf') format("truetype");
 }
-@font-face {
-  font-family: "AntipastoPro-DemiBold";
-  src: url('../fonts/Zetafonts - AntipastoPro-DemiBold.otf') format("opentype");
-}
 
-.anima-overlay {
-  position            : absolute;
-  opacity             : 0;
-  display             : none;
-  top                 : 0;
-  width               : 100%;
-  height              : 100%;
-}
 .lifestyle {
   width               : 100%;
   min-width           : 375px;
@@ -36,74 +24,6 @@ div {
 div {
   -webkit-text-size-adjust: none;
 }
-.an-animation-enter1 {
-  opacity             : 0;
-  display             : block;
-  -webkit-animation   : an-animation-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
-  -moz-animation      : an-animation-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
-  -o-animation        : an-animation-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
-  animation           : an-animation-enter1-frames 0.20000000298s ease-in-out 1 normal forwards;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -o-animation-delay  : 0s;
-  animation-delay     : 0s;
-}
-@-webkit-keyframes an-animation-enter1-frames {
-  0%
-   
-  {
-  opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-    }
-}
-@-moz-keyframes an-animation-enter1-frames {
-  0%
-   
-  {
-  opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-    }
-}
-@-o-keyframes an-animation-enter1-frames {
-  0%
-   
-  {
-  opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-    }
-}
-@keyframes an-animation-enter1-frames {
-  0%
-   
-  {
-  opacity: 0;
-    }
-  
-    
-  100%
-   
-  {
-  opacity: 1;
-    }
-}
 .lifestyle .attentionseeker {
   background-color    : rgba(255,255,255,0.0);
   top                 : 549px;
@@ -112,22 +32,35 @@ div {
   position            : absolute;
   margin              : 0;
   left                : 19px;
+  overflow            : hidden;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .attentionseeker .u9577u65b9u5f6295 {
-  background-color    : rgba(201, 25, 116, 1.0);
+.lifestyle .attentionseeker .background {
+  background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 85px;
   width               : 338px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
-  border-radius       : 42px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
+}
+.lifestyle .attentionseeker .u9577u65b9u5f6295 {
+    background-color    : rgba(201, 25, 116, 1.0);
+    top                 : 1px;
+    height              : 85px;
+    width               : 338px;
+    position            : absolute;
+    margin              : 0;
+    left                : 0px;
+    border-radius       : 42px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 .lifestyle .attentionseeker .attentionseeker2 {
   background-color    : rgba(255,255,255,0.0);
@@ -136,13 +69,13 @@ div {
   width               : 71px;
   position            : absolute;
   margin              : 0;
-  left                : 21px;
+  left                : 25px;
   overflow            : hidden;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .attentionseeker .attentionseeker2 .background {
+.lifestyle .attentionseeker .attentionseeker2 .background1 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 43px;
@@ -180,22 +113,39 @@ div {
 }
 .lifestyle .attentionseeker .attentionseeker1 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
+  top                 : 47px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 106px;
+  left                : 145px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Roboto", Helvetica, Arial, serif;
   font-weight         : 300;
   font-style          : normal;
-  font-size           : 25.0px;
+  font-size           : 15.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 29.0px;
+  line-height         : 18.0px;
+}
+.lifestyle .attentionseeker .u6b32u3057u304cu308au30a2u30c6u30f3u30b7u30e7u30f3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 21px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 99px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 30.0px;
 }
 .lifestyle .greedtrend {
   background-color    : rgba(255,255,255,0.0);
@@ -205,6 +155,19 @@ div {
   position            : absolute;
   margin              : 0;
   left                : 19px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestyle .greedtrend .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 85px;
+  width               : 338px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
@@ -224,34 +187,34 @@ div {
 }
 .lifestyle .greedtrend .greedtrend2 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 12px;
-  height              : 56px;
-  width               : 61px;
+  top                 : 15px;
+  height              : 55px;
+  width               : 60px;
   position            : absolute;
   margin              : 0;
-  left                : 27px;
+  left                : 30px;
   overflow            : hidden;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .greedtrend .greedtrend2 .background {
+.lifestyle .greedtrend .greedtrend2 .background1 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 1px;
+  top                 : 0px;
   height              : 55px;
   width               : 60px;
   position            : absolute;
   margin              : 0;
-  left                : 1px;
+  left                : 0px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
 .lifestyle .greedtrend .greedtrend2 .u30d1u30b9554 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 13px;
+  top                 : 12px;
   height              : 43px;
-  width               : 47px;
+  width               : 46px;
   position            : absolute;
   margin              : 0;
   left                : 0px;
@@ -261,7 +224,7 @@ div {
 }
 .lifestyle .greedtrend .greedtrend2 .u30d1u30b9555 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 3px;
+  top                 : 2px;
   height              : 21px;
   width               : 20px;
   position            : absolute;
@@ -274,18 +237,18 @@ div {
 .lifestyle .greedtrend .greedtrend2 .u7dda46 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 53px;
-  height              : 4px;
+  height              : 3px;
   width               : 4px;
   position            : absolute;
   margin              : 0;
-  left                : 17px;
+  left                : 16px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
 .lifestyle .greedtrend .greedtrend2 .u7dda47 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 43px;
+  top                 : 42px;
   height              : 11px;
   width               : 15px;
   position            : absolute;
@@ -297,20 +260,20 @@ div {
 }
 .lifestyle .greedtrend .greedtrend2 .u30d1u30b9556 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 41px;
-  height              : 4px;
+  top                 : 40px;
+  height              : 5px;
   width               : 4px;
   position            : absolute;
   margin              : 0;
-  left                : 37px;
+  left                : 36px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
 .lifestyle .greedtrend .greedtrend2 .u7dda48 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 46px;
-  height              : 5px;
+  top                 : 45px;
+  height              : 6px;
   width               : 3px;
   position            : absolute;
   margin              : 0;
@@ -321,9 +284,9 @@ div {
 }
 .lifestyle .greedtrend .greedtrend2 .u30d1u30b9557 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 51px;
+  top                 : 50px;
   height              : 4px;
-  width               : 5px;
+  width               : 4px;
   position            : absolute;
   margin              : 0;
   left                : 40px;
@@ -333,21 +296,21 @@ div {
 }
 .lifestyle .greedtrend .greedtrend2 .u7dda49 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 48px;
+  top                 : 47px;
   height              : 5px;
   width               : 6px;
   position            : absolute;
   margin              : 0;
-  left                : 45px;
+  left                : 44px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
 .lifestyle .greedtrend .greedtrend2 .u7dda50 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 46px;
+  top                 : 45px;
   height              : 4px;
-  width               : 5px;
+  width               : 4px;
   position            : absolute;
   margin              : 0;
   left                : 50px;
@@ -357,24 +320,24 @@ div {
 }
 .lifestyle .greedtrend .greedtrend2 .u30d1u30b9558 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 42px;
+  top                 : 41px;
   height              : 12px;
   width               : 12px;
   position            : absolute;
   margin              : 0;
-  left                : 50px;
+  left                : 49px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
 .lifestyle .greedtrend .greedtrend2 .u30d1u30b9559 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 7px;
+  top                 : 6px;
   height              : 33px;
   width               : 18px;
   position            : absolute;
   margin              : 0;
-  left                : 0px;
+  left                : -1px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
@@ -382,8 +345,8 @@ div {
 .lifestyle .greedtrend .greedtrend2 .u30d1u30b9560 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
-  height              : 10px;
-  width               : 14px;
+  height              : 9px;
+  width               : 13px;
   position            : absolute;
   margin              : 0;
   left                : 9px;
@@ -393,7 +356,26 @@ div {
 }
 .lifestyle .greedtrend .greedtrend1 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
+  top                 : 45px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 159px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Roboto", Helvetica, Arial, serif;
+  font-weight         : 300;
+  font-style          : normal;
+  font-size           : 15.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  line-height         : 18.0px;
+}
+.lifestyle .greedtrend .u6b32u5f35u308au30c8u30ecu30f3u30c9 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 21px;
   height              : auto;
   width               : auto;
   position            : absolute;
@@ -402,15 +384,13 @@ div {
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
-  font-family         : "Roboto", Helvetica, Arial, serif;
-  font-weight         : 300;
-  font-style          : normal;
-  font-size           : 25.0px;
-  color               : rgba(0, 0, 0, 1.0);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(255, 255, 255, 1.0);
   text-align          : left;
-  line-height         : 29.0px;
+  line-height         : 30.0px;
 }
-.lifestyle .favoritemyway {
+.lifestyle .myway {
   background-color    : rgba(255,255,255,0.0);
   top                 : 355px;
   height              : 85px;
@@ -418,11 +398,41 @@ div {
   position            : absolute;
   margin              : 0;
   left                : 19px;
+  overflow            : hidden;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .u9577u65b9u5f6293 {
+.lifestyle .myway .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 85px;
+  width               : 338px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestyle .myway .u3053u3060u308fu308au30deu30a4u30a6u30a7u30a4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 21px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 100px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
+  font-size           : 23.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 35.0px;
+}
+.lifestyle .myway .u9577u65b9u5f6293 {
   background-color    : rgba(76, 176, 87, 1.0);
   top                 : 0px;
   height              : 85px;
@@ -435,20 +445,20 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 {
+.lifestyle .myway .favoritemyway {
   background-color    : rgba(255,255,255,0.0);
   top                 : 8px;
   height              : 70px;
   width               : 42px;
   position            : absolute;
   margin              : 0;
-  left                : 37px;
+  left                : 39px;
   overflow            : hidden;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .background {
+.lifestyle .myway .favoritemyway .background1 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 70px;
@@ -460,7 +470,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 72px;
@@ -472,7 +482,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30d1u30b9551 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30d1u30b9551 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 22px;
@@ -484,7 +494,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u7dda41 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u7dda41 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 13px;
   height              : 59px;
@@ -496,7 +506,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u7dda42 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u7dda42 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 13px;
   height              : 59px;
@@ -508,7 +518,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 40px;
   height              : 29px;
@@ -520,7 +530,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 .u7dda43 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 .u7dda43 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 26px;
   height              : 3px;
@@ -532,7 +542,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 .u7dda44 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 .u7dda44 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 4px;
   height              : 20px;
@@ -544,7 +554,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 .u7dda45 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316444 .u7dda45 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 3px;
@@ -556,7 +566,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316445 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316445 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 28px;
   height              : 11px;
@@ -568,7 +578,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316445 .u30d1u30b9552 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316445 .u30d1u30b9552 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 1px;
   height              : 9px;
@@ -580,7 +590,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway2 .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316445 .u30d1u30b9553 {
+.lifestyle .myway .favoritemyway .u30b0u30ebu30fcu30d7u5316446 .u30b0u30ebu30fcu30d7u5316445 .u30d1u30b9553 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 11px;
@@ -592,24 +602,41 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .favoritemyway .favoritemyway1 {
+.lifestyle .myway .fastidiousmyway {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
+  top                 : 48px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 111px;
+  left                : 140px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Roboto", Helvetica, Arial, serif;
   font-weight         : 300;
   font-style          : normal;
-  font-size           : 25.0px;
+  font-size           : 15.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 29.0px;
+  line-height         : 18.0px;
+}
+.lifestyle .myway .u3053u3060u308fu308au30deu30a4u30a6u30a7u30a41 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 25px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 110px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 30.0px;
 }
 .lifestyle .friendsforever {
   background-color    : rgba(255,255,255,0.0);
@@ -619,6 +646,19 @@ div {
   position            : absolute;
   margin              : 0;
   left                : 19px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestyle .friendsforever .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 85px;
+  width               : 338px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
@@ -638,7 +678,7 @@ div {
 }
 .lifestyle .friendsforever .friendsforever2 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 16px;
+  top                 : 18px;
   height              : 50px;
   width               : 72px;
   position            : absolute;
@@ -649,7 +689,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .friendsforever .friendsforever2 .background {
+.lifestyle .friendsforever .friendsforever2 .background1 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 50px;
@@ -843,24 +883,41 @@ div {
 }
 .lifestyle .friendsforever .friendsforever1 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
+  top                 : 46px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 112px;
+  left                : 148px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Roboto", Helvetica, Arial, serif;
   font-weight         : 300;
   font-style          : normal;
-  font-size           : 25.0px;
+  font-size           : 15.0px;
   color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  line-height         : 29.0px;
+  text-align          : justify;
+  line-height         : 18.0px;
 }
-.lifestyle .safetyfirst {
+.lifestyle .friendsforever .u7e4bu304cu308au30d5u30a9u30fcu30a8u30d0u30fc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 22px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 110px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 30.0px;
+}
+.lifestyle .saftyfirst {
   background-color    : rgba(255,255,255,0.0);
   top                 : 161px;
   height              : 85px;
@@ -868,11 +925,24 @@ div {
   position            : absolute;
   margin              : 0;
   left                : 19px;
+  overflow            : hidden;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .u9577u65b9u5f629 {
+.lifestyle .saftyfirst .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 85px;
+  width               : 338px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.lifestyle .saftyfirst .u9577u65b9u5f629 {
   background-color    : rgba(232, 86, 42, 1.0);
   top                 : 0px;
   height              : 85px;
@@ -885,39 +955,56 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .safetyfirst2 {
+.lifestyle .saftyfirst .safetyfirst {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 28px;
+  top                 : 46px;
   height              : auto;
   width               : auto;
   position            : absolute;
   margin              : 0;
-  left                : 134px;
+  left                : 162px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Roboto", Helvetica, Arial, serif;
   font-weight         : 300;
   font-style          : normal;
-  font-size           : 25.0px;
+  font-size           : 15.0px;
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
-  line-height         : 29.0px;
+  line-height         : 18.0px;
 }
-.lifestyle .safetyfirst .safetyfirst1 {
+.lifestyle .saftyfirst .u5b89u5fc3u30d5u30a1u30fcu30b9u30c8 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 14px;
+  top                 : 24px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 130px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+  font-size           : 20.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 30.0px;
+}
+.lifestyle .saftyfirst .safetyfirst1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
   height              : 63px;
   width               : 63px;
   position            : absolute;
   margin              : 0;
-  left                : 27px;
+  left                : 29px;
   overflow            : hidden;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .safetyfirst1 .background {
+.lifestyle .saftyfirst .safetyfirst1 .background1 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 63px;
@@ -929,7 +1016,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 {
+.lifestyle .saftyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 62px;
@@ -941,7 +1028,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 {
+.lifestyle .saftyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 1px;
   height              : 61px;
@@ -953,7 +1040,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 {
+.lifestyle .saftyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 61px;
@@ -965,7 +1052,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 .u30d1u30b9541 {
+.lifestyle .saftyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 .u30d1u30b9541 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 3px;
   height              : 58px;
@@ -977,7 +1064,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .safetyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 .u30d1u30b9542 {
+.lifestyle .saftyfirst .safetyfirst1 .u30a2u30fcu30c8u30efu30fcu30af1 .u7de8u96c6u30e2u30fcu30c9 .u30b0u30ebu30fcu30d7u5316438 .u30d1u30b9542 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 0px;
   height              : 32px;

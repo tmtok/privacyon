@@ -8,6 +8,7 @@
         <meta content="Launchpad by Anima" name="author">
         </meta>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <!-- <script src="/socket.io/socket.io.js"></script> -->
         <script src="//localhost:5000/socket.io/socket.io.js"></script>
@@ -15,87 +16,59 @@
     </head>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
-        <input id="anPageName" name="page" type="hidden" value="logininput"/>
-        <form action="none" class="logininput" method="post" name="none">
-            <div style="width: 375px; height: 100%; position:relative; margin:auto;">
-                <div class="logininput1">
-                    <div class="faceform">
-                        <div class="mailaddress">
-                        </div>
-                        <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda141" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda142" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <input id="faceMailAddress" class="textmailaddress" name="textMailAddress" placeholder="Mail Address"/>
-                        <input id="facePassword" class="textpassword" name="textPassword" placeholder="Password"/>
-                    </div>
-                    <div class="twitterform">
-                        <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1412" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1422" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <input id="twitterPassword" class="textpassword" name="textPassword" placeholder="Password"/>
-                        <input id="twitterUsername" class="textusername" name="textUsername" placeholder="Username"/>
-                    </div>
-                    <div class="googleform">
-                        <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1413" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1423" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <input id="googlePassword" class="textpassword" name="textPassword" placeholder="Password"/>
-                        <input id="googleMailAddress" class="textmailadress" name="textMailAdress" placeholder="Mail Adress"/>
-                    </div>
-                    <div class="logo">
-                        <div class="facebooklogo">
-                            <div class="background">
-                            </div>
-                            <img anima-src="./img/logininput-u30d1u30b910@2x.png" class="u30d1u30b910" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                            <img anima-src="./img/logininput-u30d1u30b911@2x.png" class="u30d1u30b911" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </div>
-                        <img anima-src="./img/logininput-twitter@2x.png" class="twitter" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="google">
-                            <div class="background">
-                            </div>
-                            <div class="google1">
-                                <div class="group5">
-                                    <img anima-src="./img/logininput-combined-shape@2x.png" class="combinedshape" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                </div>
-                                <div class="group51">
-                                    <img anima-src="./img/logininput-group-5@2x.png" class="group54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                </div>
-                                <div class="group52">
-                                    <img anima-src="./img/logininput-group-5 1@2x.png" class="group54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                </div>
-                                <div class="group53">
-                                    <img anima-src="./img/logininput-group-5 2@2x.png" class="group54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="navigation">
-                    <div class="backgroundblur">
-                    </div>
-                    <a href="login.html">
-                        <img anima-src="./img/settingcomplete-u30d1u30b9505@2x.png" class="u30d1u30b9505" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    </a>
-                    <div class="signin">
-                        Sign in
-                    </div>
-                </div>
-                <a href="setting.html">
-                    <div id="signupButton" class="signeup">
-                        <a href="lifestyle.html">
-                            <div class="signuphaikei">
-                                <div class="u9577u65b9u5f6282">
-                                </div>
-                            </div>
-                        </a>
-                        <div class="signup">
-                            <div class="signup1">
-                                Sign up
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </form>
-        <!-- Scripts -->
-        <script>
+<input id="anPageName" name="page" type="hidden" value="logininput"/>
+<form action="none" class="logininput" method="post" name="none">
+  <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+    <div class="logininput1">
+      <div class="faceform"> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda141" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda142" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+        <input id="faceMailAddress" class="textmailaddress" name="textMailAddress" placeholder="Mail Address" disabled />
+        <input id="facePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
+      </div>
+      <div class="twitterform"> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1412" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1422" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+        <input id="twitterPassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
+        <input id="twitterUsername" class="textusername" name="textUsername" placeholder="Username" disabled />
+      </div>
+      <div class="googleform"> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1413" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1423" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+        <input id="googlePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
+        <input id="googleMailAddress" class="textmailadress" name="textMailAdress" placeholder="Mail Adress" disabled />
+      </div>
+      <div class="logo">
+        <div class="facebook"><img width="70" height="70" anima-src="./img/fb1.png"/>
+          <input type="checkbox" class="social_checkbox" id="faceCheckBox"/>
+        </div>
+		  
+        <div class="twitter"><img width="70" height="70" anima-src="./img/tw1.png" />
+          <input type="checkbox" class="social_checkbox" id="twitterCheckBox" />
+        </div>
+		  
+        <div class="google"><img width="70" height="70" anima-src="./img/go1.png" /></div>
+        <span class="google">
+        <input type="checkbox" class="social_checkbox" id="googleCheckBox" />
+      </span>      </div>
+    </div>
+    <div class="navigation">
+      <div class="backgroundblur"> </div>
+      <a href="login.html"> <img anima-src="./img/settingcomplete-u30d1u30b9505@2x.png" class="u30d1u30b9505" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> </a>
+      <div class="signin"> Sign in </div>
+    </div>
+    <div id="explanation">
+      <p>あなたがプライバシー設定をしたいサービスにチェックをつけ</p>
+      <p>ID、またはmailaddressとPASSWPRDを入力してください</p>
+    </div>
+    <a href="setting.html">
+    <div id="signupButton" class="signeup"> <a href="lifestyle.html">
+      <div class="signuphaikei">
+        <div class="u9577u65b9u5f6282"> </div>
+      </div>
+      </a>
+      <div class="signup">
+        <div class="signup1"> Sign up </div>
+      </div>
+    </div>
+    </a> </div>
+</form>
+<!-- Scripts --> 
+<script>
             anima_isHidden = function(e) {
                 if (!(e instanceof HTMLElement)) return !1;
                 if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
@@ -169,7 +142,46 @@
             setTimeout(function() {
                 anima_loadAsyncSrc();
             }, 200);
-        </script>
-        <!-- End of Scripts -->
-    </body>
+        </script> 
+<!-- 佐々木追加分 --> 
+<script type="text/javascript" charset="utf-8">
+            $(function() {
+                $('#faceCheckBox').on('change', function(){
+                    if ($(this).is(':checked')) {
+                        $('#facePassword').prop('disabled', false);
+                        $('#faceMailAddress').prop('disabled', false);
+                        $('.faceform').css('opacity', 1);
+                    } else {
+                        $('#facePassword').prop('disabled', true);
+                        $('#faceMailAddress').prop('disabled', true);
+                        $('.faceform').css('opacity', 0.3);
+                    }
+                });
+                $('#twitterCheckBox').on('change', function(){
+                    if ($(this).is(':checked')) {
+                        $('#twitterPassword').prop('disabled', false);
+                        $('#twitterMailAddress').prop('disabled', false);
+                        $('.twitterform').css('opacity', 1);
+                    } else {
+                        $('#twitterPassword').prop('disabled', true);
+                        $('#twitterMailAddress').prop('disabled', true);
+                        $('.twitterform').css('opacity', 0.3);
+                    }
+                });
+                $('#googleCheckBox').on('change', function(){
+                    if ($(this).is(':checked')) {
+                        $('#googlePassword').prop('disabled', false);
+                        $('#googleMailAddress').prop('disabled', false);
+                        $('.googleform').css('opacity', 1);
+                    } else {
+                        $('#googlePassword').prop('disabled', true);
+                        $('#googleMailAddress').prop('disabled', true);
+                        $('.googleform').css('opacity', 0.3);
+                    }
+                });
+            });
+        </script> 
+</script> 
+<!-- End of Scripts -->
+</body>
 </html>

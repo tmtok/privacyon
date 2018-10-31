@@ -8,71 +8,87 @@
         <link href="./css/title3.css" rel="stylesheet" type="text/css"/>
         <meta content="Launchpad by Anima" name="author">
         </meta>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+	<script>
+	
+	
+	
+$(function() {
+  $('#checkBtn').on('change', function(){
+    if ($(this).is(':checked')) {
+    //チェックが入ったら、送信ボタンを押せる
+    $('#submitBtn').prop('disabled', false);
+	//window.location.href = 'login.html';
+	//$('#submitBtn').html("<a href='login.html'</a>");
+    } else {
+    //チェックが入っていなかったら、送信ボタンを押せない
+    $('#submitBtn').prop('disabled', true);
+	//$('#submitBtn').html("<input id="submitBtn" type="submit" value="Privacy ONを使う" disabled>");
+    }
+  });
+});
+</script>
     </head>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
-        <input id="anPageName" name="page" type="hidden" value="title3"/>
-        <form action="none" class="title3" method="post" name="none">
-            <div style="width: 375px; height: 100%; position:relative; margin:auto;">
-                <div class="privacyonlogo">
-                    <div class="background">
-                    </div>
-                    <img anima-src="./img/login-u30d1u30b9438@2x.png" class="u30d1u30b9438" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/title3-u30d1u30b9437@2x.png" class="u30d1u30b9437" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/title3-u30d1u30b9440@2x.png" class="u30d1u30b9440" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <img anima-src="./img/title3-u30d1u30b9439@2x.png" class="u30d1u30b9439" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                    <div class="privacyon">
-                        Privacy ON
-                    </div>
-                </div>
-                <a href="login.html">
-                    <div class="button">
-                        <img anima-src="./img/title3-shape@2x.png" class="shape" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        <div class="u540cu610fu3059u308b">
-                            同意する
-                        </div>
-                    </div>
-                </a>
-                <a href="title2.html">
-                    <img anima-src="./img/title2-chevron-left@2x.png" class="chevronleft" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                </a>
-                <div class="u81eau5206u306eprivacyu3092onu306bu3057u307eu305bu3093u304buff1f">
-                    <span class="span1">自分の</span><span class="span2">Privacy</span><span class="span3">を</span><span class="span4">ON</span><span class="span5">にしませんか？</span>
-                </div>
-                <a href="javascript:animaShowOverlay('mensekizikou', 'an-animation-enter2'); anima_loadAsyncSrc(); ">
-                    <div class="u5fc5u305au3053u3061u3089u3092u304au8aadu307fu4e0bu3055u3044">
-                        <span class="span1">必ず</span><span class="span2">こちら</span><span class="span3">をお読み下さい</span>
-                    </div>
-                </a>
-            </div>
-        </form>
-        <div class="anima-overlay" id="overlay-mensekizikou" style="min-height:667px; position:fixed;">
-            <form action="none" class="mensekizikou" method="post" name="none">
-                <div style="width: 375px; height: 100%; position:relative; margin:auto;">
-                    <div class="mensekizikoushirohaikei">
-                    </div>
-                    <div class="u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042">
-                        <span class="span1">あああああああああああああああああ<br /></span><span class="span2">あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ<br />あああああああああああああああああ</span>
-                    </div>
-                    <div class="menseki">
-                        免責事項
-                    </div>
-                    <a href="title3.html">
-                        <div class="batsubutton">
-                            <div class="background">
-                            </div>
-                            <div class="bluebutton2">
-                            </div>
-                            <img anima-src="./img/mensekizikou-plus@2x.png" class="plus" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                        </div>
-                    </a>
-                    <div class="kakuninshimashita">
-                        確認しました
-                    </div>
-                </div>
-            </form>
+<input id="anPageName" name="page" type="hidden" value="title3"/>
+<form action="login.html" class="title3" method="post" name="none">
+  <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+    <div class="privacyonlogo">
+      <img anima-src="./img/login-u30d1u30b9438@2x.png" class="u30d1u30b9438" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/title3-u30d1u30b9437@2x.png" class="u30d1u30b9437" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/title3-u30d1u30b9440@2x.png" class="u30d1u30b9440" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/title3-u30d1u30b9439@2x.png" class="u30d1u30b9439" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+      <img anima-src="./img/login-u30d1u30b9438@2x.png" class="u30d1u30b9438" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/title3-u30d1u30b9437@2x.png" class="u30d1u30b9437" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/title3-u30d1u30b9440@2x.png" class="u30d1u30b9440" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/title3-u30d1u30b9439@2x.png" class="u30d1u30b9439" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+      <div class="privacyon"> Privacy ON </div>
+    </div>
+    <a href="title2.html"> <img anima-src="./img/title2-chevron-left@2x.png" class="chevronleft" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/></a>
+	  
+    <div class="u81eau5206u306eprivacyu3092onu306bu3057u307eu305bu3093u304buff1f"> <span class="span1">自分のPrivacyをONにしませんか？</span></div>
+	  
+    <div class="u5fc5u305au3053u3061u3089u3092u304au8aadu307fu4e0bu3055u3044"> <a href="javascript:animaShowOverlay('mensekizikou', 'an-animation-enter2'); anima_loadAsyncSrc(); ">
+      <p>
+	 <input id="checkBtn" type="checkbox">
+      利用規約に同意します
+	  </p></a>
+      <p><a href="javascript:animaShowOverlay('mensekizikou', 'an-animation-enter2'); anima_loadAsyncSrc(); ">
+        <!-- 送信ボタン -->
+        </a> </p>
+		 <input id="submitBtn" type="submit" value="Privacy ONを使う"   disabled>
+	    
+		
+    　 </div>
+  </div>
+</form>
+<div class="anima-overlay" id="overlay-mensekizikou" style="min-height:667px; position:fixed;">
+  <form action="none" class="mensekizikou" method="post" name="none">
+    <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+      <div class="mensekizikoushirohaikei"> </div>
+      <div class="u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042"> <span class="span1">あああああああああああああああああ<br />
+        </span><span class="span2">あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ<br />
+        あああああああああああああああああ</span> </div>
+      <div class="menseki"> 利用規約 </div>
+      <a href="title3.html">
+      <div class="batsubutton">
+        <div class="background"> </div>
+        <div class="bluebutton2"> </div>
+        <img anima-src="./img/mensekizikou-plus@2x.png" class="plus" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> </div>
+      </a>
+      <div class="kakuninshimashita">
+        &nbsp;
         </div>
-        <script>
+    </div>
+  </form>
+</div>
+<script>
             var overlay_id = "overlay-mensekizikou";
             document.getElementById(overlay_id).addEventListener("click", function(event) {
                 var e = event || window.event;
@@ -81,9 +97,9 @@
                     animaHideOverlay('mensekizikou', 'anima-animate-disappear');
                 }
             }, false);
-        </script>
-        <!-- Scripts -->
-        <script>
+        </script> 
+<!-- Scripts --> 
+<script>
             anima_isHidden = function(e) {
                 if (!(e instanceof HTMLElement)) return !1;
                 if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
@@ -157,8 +173,8 @@
             setTimeout(function() {
                 anima_loadAsyncSrc();
             }, 200);
-        </script>
-        <script>
+        </script> 
+<script>
             function AnimaShowOnScroll() {
                 this.toShow = [];
                 this.nextEventY = undefined;
@@ -247,8 +263,8 @@
                 var animaShowOnScroll = new AnimaShowOnScroll();
                 animaShowOnScroll.init();
             }, 250);
-        </script>
-        <script>
+        </script> 
+<script>
             animaShowOverlay = function(overlayName, animationName) {
                 overlayName = 'overlay-' + overlayName;
                 var cssClasses = document.getElementById(overlayName).className.split(' ');
@@ -278,7 +294,7 @@
                     }
                 }
             };
-        </script>
-        <!-- End of Scripts -->
-    </body>
+        </script> 
+<!-- End of Scripts -->
+</body>
 </html>
