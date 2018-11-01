@@ -6,7 +6,8 @@ var port = process.env.PORT || 5000,
   io = require('socket.io').listen(server),
   fs = require('fs'),
   twitterMod = require('./twitter'),
-  googleMod = require('./google');
+  googleMod = require('./google'),
+  facebookMod = require('./facebook');
 
 app.use(express.static(__dirname + "/html"))
 server.listen(port);
@@ -24,8 +25,9 @@ io.sockets.on('connection', function(socket) {
   })
 
   socket.on('sign_up', function(data) {
-    if (data.twitterUsername != "" && data.twitterPassword != "") {
-      twitterMod.login(data.twitterUsername, data.twitterPassword);
+    if (data.faceMailAddress != "" && data.facePassword != "") {
+      // twitterMod.login(data.twitterUsername, data.twitterPassword);
+      facebookMod.login(data.faceMailAddress,data.facePassword);
       console.log("received username : " + data.googleMailAddress + " pass : " + data.googlePassword);
       // googleMod.login(data.googleMailAddress,data.googlePassword);
     }
@@ -33,7 +35,8 @@ io.sockets.on('connection', function(socket) {
 
   socket.on('safetyfirst', function(data) {
     console.log("safetyfirst");
-    twitterMod.privacy_setting(0);
+    // twitterMod.privacy_setting(0);
     // googleMod.privacy_setting(0);
+    facebookMod.privacy_setting(0);
   })
 });
