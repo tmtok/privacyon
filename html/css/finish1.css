@@ -586,7 +586,7 @@ div {
   transform           : rotate(0deg);
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
   font-size           : 15.0px;
-  color               : rgba(0, 0, 0, 1.0);
+  color               : rgba(255, 255, 255, 1.0);
   text-align          : justify;
   line-height         : 23.0px;
 }
@@ -603,7 +603,7 @@ div {
   transform           : rotate(0deg);
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
   font-size           : 25.0px;
-  color               : rgba(0, 0, 0, 1.0);
+  color               : rgba(255, 255, 255, 1.0);
   text-align          : justify;
   line-height         : 38.0px;
 }
