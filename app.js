@@ -33,10 +33,10 @@ io.sockets.on('connection', function(socket) {
     }
   })
 
-  socket.on('safetyfirst', function(data) {
-    console.log("safetyfirst");
+  socket.on('select_lifestyle', function(index) {
+    console.log("lifestyle : " + index);
     // twitterMod.privacy_setting(0);
     // googleMod.privacy_setting(0);
-    facebookMod.privacy_setting(0);
+    facebookMod.privacy_setting(index);
   })
 });

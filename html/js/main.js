@@ -16,7 +16,7 @@ var readFileContentsList = new Array();
 var readFileNameList = new Array();
 var readFileIndexList = new Array();
 
-$(document).ready(function() {
+$(document).ready(function () {
   // var socket = io.connect("https://movinglight-settings.herokuapp.com/");
   socket = io.connect(thisURL);
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
   receiveSocket();
   // sendSocket();
 
-  $('#signupButton').on('click',function(){
+  $('#signupButton').on('click', function () {
     var obj = new Object();
     obj.faceMailAddress = document.getElementById('faceMailAddress').value;
     obj.facePassword = document.getElementById('facePassword').value;
@@ -50,12 +50,32 @@ $(document).ready(function() {
     obj.googlePassword = document.getElementById('googlePassword').value;
     obj.googleMailAddress = document.getElementById('googleMailAddress').value;
     console.log(obj.faceMailAddress);
-    socket.emit('sign_up',obj);
+    socket.emit('sign_up', obj);
   })
 
-  $('#select_safetyfirst').on('click',function(){
-    console.log("pressed safetyfirst");
-    socket.emit('safetyfirst',"");
+  $('#select_safetyfirst').on('click', function () {
+    console.log("pressed safetyfirst 2");
+    // socket.emit('select_lifestyle', 0);
+  })
+
+  $('#select_attentionseeker').on('click', function () {
+    console.log("pressed attentionseeker");
+    socket.emit('select_lifestyle', 1);
+  })
+
+  $('#select_greedtrend').on('click', function () {
+    console.log("pressed greedtrend");
+    socket.emit('select_lifestyle', 2);
+  })
+
+  $('#select_fastidiousmyway').on('click', function () {
+    console.log("pressed fastidiousmyway");
+    socket.emit('select_lifestyle', 3);
+  })
+
+  $('#select_friendsforever').on('click', function () {
+    console.log("pressed friendsforever");
+    socket.emit('select_lifestyle', 4);
   })
 
 });
@@ -65,7 +85,7 @@ $(document).ready(function() {
 /*  socket.io  */
 /*-----------------------------------*/
 function receiveSocket() {
-  socket.on("console_out", function(data) {
+  socket.on("console_out", function (data) {
     consoleOut(data);
   })
 
