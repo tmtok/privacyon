@@ -196,7 +196,7 @@ div {
     background-color    : rgba(255,255,255,0.0);
     top                 : 2px;
     height              : 34px;
-    width               : 230px;
+    width               : 223px;
     position            : absolute;
     margin              : 0;
     left                : 3px;
@@ -213,6 +213,8 @@ div {
 .logininput .logininput1 .twitterform .textusername::placeholder {
   color               : rgba(0, 0, 0, 0.6);
 }
+
+
 .logininput .logininput1 .googleform {
     background-color    : rgba(255,255,255,0.0);
     top                 : 268px;

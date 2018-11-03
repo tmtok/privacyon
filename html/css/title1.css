@@ -70,21 +70,22 @@ div {
   line-height         : 23.0px;
 }
 .title1 .text .u3042u306au305fu306fu30d7u30e9u30a4u30d0u30b7u30fcu8a2du5b9au3092u3057u3066u307eu3059u304buff1f {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 326px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 22px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
-  font-size           : 18.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : left;
-  line-height         : 27.0px;
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 274px;
+    height              : auto;
+    width               : auto;
+    position            : absolute;
+    margin              : 0;
+    left                : 22px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+    font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+    font-size           : 18.0px;
+    color               : rgba(0, 0, 0, 1.0);
+    text-align          : left;
+    line-height         : 27.0px;
+	text-align: center;
 }
 .title1 .text .photo1 {
   background-color    : rgba(255,255,255,0.0);

@@ -179,19 +179,19 @@ div {
 }
 .lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b2 {
     background-color    : rgba(255,255,255,0.0);
-    top                 : 10px;
+    top                 : 8px;
     height              : auto;
     width               : 127px;
     position            : absolute;
     margin              : 0;
-    left                : 39px;
+    left                : 32px;
     -ms-transform       : rotate(0deg); /* IE 9 */
     -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
     transform           : rotate(0deg);
     font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
     font-size           : 10.0px;
     color               : rgba(255, 255, 255, 1.0);
-    text-align          : left;
+    text-align          : center;
     line-height         : 15.0px;
 }
 .lifestylesaftyfirst .u8a73u7d30u67a0 .u8457u540du4ebau3084u6709u540du4ebau3088u308au3082u53cbu4ebau306eu60c5u5831u3092u898bu305fu3044u3002 {
@@ -551,7 +551,7 @@ div {
 }
 .lifestylesaftyfirst .u8a73u7d30u67a0 .u6295u7a3fu516cu958bu7bc4u56f2 .a1toukou .group .u8da3u5473u30fbu95a2u5fc3 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 5px;
+  top                 : 1px;
   height              : auto;
   width               : 34px;
   position            : absolute;
@@ -674,7 +674,7 @@ div {
   transform           : rotate(0deg);
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
   font-size           : 15.0px;
-  color               : rgba(0, 0, 0, 1.0);
+  color               : rgba(255, 255, 255, 1.0);
   text-align          : justify;
   line-height         : 23.0px;
 }
@@ -691,7 +691,7 @@ div {
   transform           : rotate(0deg);
   font-family         : "HiraginoSans-W2", Helvetica, Arial, serif;
   font-size           : 25.0px;
-  color               : rgba(0, 0, 0, 1.0);
+  color               : rgba(255, 255, 255, 1.0);
   text-align          : justify;
   line-height         : 38.0px;
 }
