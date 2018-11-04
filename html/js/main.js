@@ -86,7 +86,7 @@ $(document).ready(function () {
 /*-----------------------------------*/
 function receiveSocket() {
   socket.on("console_out", function (data) {
-    consoleOut(data);
+    console.log("msg : " + data);
   })
 
 }

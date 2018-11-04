@@ -15,6 +15,12 @@ async function main() {
   driver = await new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
+
+  const window = driver.getWindowHandle();
+  await driver.switchTo().window(window);
+  await driver.manage().window().setRect({ 'x': 0, 'y': 0, 'width': 560, 'height': 1050 });
+
+
   await driver.get('http://twitter.com')
   const name = await driver.findElement(By.xpath('//input[@name="session[username_or_email]"]'));
   const pass = await driver.findElement(By.xpath('//input[@name="session[password]"]'));
@@ -161,13 +167,6 @@ async function setting(index) {
       break;
 
     case 3:
-      await editCheckbox(true, "allow_ads_personalization");
-      await editCheckbox(true, "allow_logged_out_device_personalization");
-      await editCheckbox(true, "allow_location_history_personalization");
-      await editCheckbox(true, "use_cookie_personalization");
-      await editCheckbox(true, "allow_sharing_data_for_third_party_personalization");
-      break;
-
     case 4:
       await editCheckbox(true, "allow_ads_personalization");
       await editCheckbox(true, "allow_logged_out_device_personalization");
@@ -189,18 +188,70 @@ async function setting(index) {
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="send_network_activity_email"]'), 1000)));
   await new Promise(resolve => setTimeout(resolve, 2000));
 
+  await editMailNotification(true);
+  await editCheckbox(false, "performance_digest_schedule");
+  await editCheckbox(false, "send_email_newsletter");
+  await editCheckbox(false, "send_activation_email");
   switch (index) {
     case 0:
-      await editMailNotification(true);
       await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(false, "send_new_direct_text_email");
       await editCheckbox(false, "send_shared_tweet_email");
       await editDropdown(false, "network_digest_schedule", '1');
       // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
-      await editCheckbox(false, "performance_digest_schedule");
-      await editCheckbox(false, "send_email_newsletter");
-      await editCheckbox(false, "send_activation_email");
       await editCheckbox(false, "send_resurrection_email_1");
+      await editCheckbox(false, "send_partner_email");
+      await editCheckbox(false, "send_survey_email");
+      await editCheckbox(false, "send_follow_recs_email");
+      await editCheckbox(false, "send_similar_people_email");
+      await editCheckbox(false, "send_smb_sales_marketing_email");
+      break;
+    case 1:
+      await editCheckbox(true, "send_network_activity_email");
+      await editCheckbox(true, "send_new_direct_text_email");
+      await editCheckbox(true, "send_shared_tweet_email");
+      await editDropdown(true, "network_digest_schedule", '1');
+      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(false, "send_resurrection_email_1");
+      await editCheckbox(false, "send_partner_email");
+      await editCheckbox(false, "send_survey_email");
+      await editCheckbox(false, "send_follow_recs_email");
+      await editCheckbox(false, "send_similar_people_email");
+      await editCheckbox(false, "send_smb_sales_marketing_email");
+      break;
+    case 2:
+      await editCheckbox(true, "send_network_activity_email");
+      await editCheckbox(false, "send_new_direct_text_email");
+      await editCheckbox(false, "send_shared_tweet_email");
+      await editDropdown(false, "network_digest_schedule", '1');
+      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(false, "send_resurrection_email_1");
+      await editCheckbox(false, "send_partner_email");
+      await editCheckbox(false, "send_survey_email");
+      await editCheckbox(true, "send_follow_recs_email");
+      await editCheckbox(false, "send_similar_people_email");
+      await editCheckbox(false, "send_smb_sales_marketing_email");
+      break;
+    case 3:
+      await editCheckbox(true, "send_network_activity_email");
+      await editCheckbox(false, "send_new_direct_text_email");
+      await editCheckbox(false, "send_shared_tweet_email");
+      await editDropdown(false, "network_digest_schedule", '1');
+      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(false, "send_resurrection_email_1");
+      await editCheckbox(false, "send_partner_email");
+      await editCheckbox(false, "send_survey_email");
+      await editCheckbox(true, "send_follow_recs_email");
+      await editCheckbox(false, "send_similar_people_email");
+      await editCheckbox(false, "send_smb_sales_marketing_email");
+      break;
+    case 4:
+      await editCheckbox(true, "send_network_activity_email");
+      await editCheckbox(false, "send_new_direct_text_email");
+      await editCheckbox(false, "send_shared_tweet_email");
+      await editDropdown(false, "network_digest_schedule", '1');
+      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(true, "send_resurrection_email_1");
       await editCheckbox(false, "send_partner_email");
       await editCheckbox(false, "send_survey_email");
       await editCheckbox(false, "send_follow_recs_email");
@@ -223,13 +274,25 @@ async function setting(index) {
 
   switch (index) {
     case 0:
-      await editCheckbox(false, "following_filter_enabled");
+    case 1:
+      await editCheckbox(true, "following_filter_enabled");
       await editCheckbox(true, "filter_not_followed_by_enabled");
       await editCheckbox(true, "filter_new_users_enabled");
       await editCheckbox(true, "filter_default_profile_image_enabled");
       await editCheckbox(true, "filter_no_confirmed_email_enabled");
       await editCheckbox(true, "filter_no_confirmed_phone_enabled");
       await editCheckbox(false, "quality_filter_enabled");
+      break;
+    case 2:
+    case 3:
+    case 4:
+      await editCheckbox(false, "following_filter_enabled");
+      await editCheckbox(false, "filter_not_followed_by_enabled");
+      await editCheckbox(false, "filter_new_users_enabled");
+      await editCheckbox(false, "filter_default_profile_image_enabled");
+      await editCheckbox(false, "filter_no_confirmed_email_enabled");
+      await editCheckbox(false, "filter_no_confirmed_phone_enabled");
+      await editCheckbox(true, "quality_filter_enabled");
       break;
     default:
   }
@@ -245,7 +308,7 @@ async function setting(index) {
 //==========================================
 async function editCheckbox(toggle, id) {
   const elem = await driver.findElement(By.xpath('//input[@id=\"' + id + '\"]'));
-  await elem.getAttribute('checked').then(function(val) {
+  await elem.getAttribute('checked').then(function (val) {
     var bVal = Boolean(val);
     if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
       elem.click();
@@ -259,7 +322,7 @@ async function editCheckbox(toggle, id) {
 
 async function editCheckboxName(toggle, name) {
   const elem = await driver.findElement(By.xpath('//input[@name=\"' + name + '\"]'));
-  await elem.getAttribute('checked').then(function(val) {
+  await elem.getAttribute('checked').then(function (val) {
     var bVal = Boolean(val);
     if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
       elem.click();
@@ -273,14 +336,14 @@ async function editCheckboxName(toggle, name) {
 
 async function editDropdown(toggle, id, val) {
   const elem = await driver.findElement(By.xpath('//select[@data-attribute=\"' + id + '\"]'));
-  await elem.sendKeys(val).catch(function(err) {
+  await elem.sendKeys(val).catch(function (err) {
     console.log("dropdown error");
   })
 }
 
 async function editMailNotification(toggle) {
   var currentSettings = true;
-  await driver.findElement(By.xpath('//span[@id="notifications-global-off"]')).catch(function(err) {
+  await driver.findElement(By.xpath('//span[@id="notifications-global-off"]')).catch(function (err) {
     currentSettings = false;
   })
   console.log("mail notifications " + currentSettings + " : " + toggle);
@@ -344,7 +407,7 @@ async function saveSettings(confirm) {
 
 
 
-exports.login = function(user, pass) {
+exports.login = function (user, pass) {
   username = user;
   password = pass;
   main()
@@ -353,7 +416,7 @@ exports.login = function(user, pass) {
     });
 }
 
-exports.privacy_setting = function(index) {
+exports.privacy_setting = function (index) {
   setting(index)
     .then((result) => {
       return true;
