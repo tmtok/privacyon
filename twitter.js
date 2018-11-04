@@ -18,15 +18,31 @@ async function main() {
 
   const window = driver.getWindowHandle();
   await driver.switchTo().window(window);
-  await driver.manage().window().setRect({ 'x': 0, 'y': 0, 'width': 560, 'height': 1050 });
+  // await driver.manage().window().setRect({ 'x': 0, 'y': 0, 'width': 560, 'height': 1050 });
 
 
-  await driver.get('http://twitter.com')
-  const name = await driver.findElement(By.xpath('//input[@name="session[username_or_email]"]'));
-  const pass = await driver.findElement(By.xpath('//input[@name="session[password]"]'));
+  await driver.get('http://twitter.com/login')
+  console.log("AAA");
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@name="session[username_or_email]"]'), 1000))).then(function(e){
+  //   console.log("AAAB");
+  // }).catch(function (err) {
+  //   console.log(err);
+  // })
+  console.log("BBB");
+  await driver.findElement(By.xpath('//input[@name="session[username_or_email]" and @class="js-username-field email-input js-initial-focus"]')).then(function (e) {
+    console.log("send username");
+    e.sendKeys(username).catch(function(errr){
+      console.log("ERROR : " + errr);
+    })
+  }).catch(function (err) {
+    console.log("[twitter] username form not found " + err);
+  })
+  const pass = await driver.findElement(By.xpath('//input[@name="session[password]" and @class="js-password-field"]')).catch(function (err) {
+    console.log("[twitter] password form not found " + err);
+  })
   // await name.sendKeys('test41003724');
   // await pass.sendKeys('123qwe');
-  await name.sendKeys(username);
   await pass.sendKeys(password);
   await pass.sendKeys(Key.ENTER);
 }

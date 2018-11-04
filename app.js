@@ -40,6 +40,7 @@ io.sockets.on('connection', function (socket) {
       })
       googleEnabled = true;
     } else if (data.twitterUsername != "" && data.twitterPassword != "") {
+      console.log("twitter login : " + data.twitterUsername + " " + data.twitterPassword);
       twitterMod.login(data.twitterUsername, data.twitterPassword);
       twitterEnabled = true;
     }

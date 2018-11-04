@@ -23,15 +23,15 @@
 		
       <div class="faceform"> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda141" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda142" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
         <input id="faceMailAddress" class="textmailaddress" name="textMailAddress" placeholder="Mail Address" disabled />
-        <input id="facePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
+        <input type="password" id="facePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
       </div>
       <div class="twitterform"> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1412" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1422" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-        <input id="twitterPassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
-        <input id="twitterUsername" class="textusername" name="textUsername" placeholder="Username" disabled />
-
+        <input id="twitterUsername" class="textusername" name="textUsername" placeholder="Username" disabled/>
+        <input type="password" id="twitterPassword" class="textpassword" name="textPassword" placeholder="Password" disabled/>
+        
       </div>
       <div class="googleform"> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1413" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1423" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-        <input id="googlePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
+        <input type="password" id="googlePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
         <input id="googleMailAddress" class="textmailadress" name="textMailAdress" placeholder="Mail Adress" disabled />
       </div>
       <div class="logo">
@@ -161,12 +161,12 @@
                 });
                 $('#twitterCheckBox').on('change', function(){
                     if ($(this).is(':checked')) {
+                        $('#twitterUsername').prop('disabled', false);
                         $('#twitterPassword').prop('disabled', false);
-                        $('#twitterMailAddress').prop('disabled', false);
                         $('.twitterform').css('opacity', 1);
-                    } else {
+                    } else {_
+                        $('#twitterUsername').prop('disabled', true);
                         $('#twitterPassword').prop('disabled', true);
-                        $('#twitterMailAddress').prop('disabled', true);
                         $('.twitterform').css('opacity', 0.3);
                     }
                 });
