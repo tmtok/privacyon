@@ -54,8 +54,8 @@ $(document).ready(function () {
   })
 
   $('#select_safetyfirst').on('click', function () {
-    console.log("pressed safetyfirst 2");
-    // socket.emit('select_lifestyle', 0);
+    console.log("pressed safetyfirst 2 AAA");
+    socket.emit('select_lifestyle', 0);
   })
 
   $('#select_attentionseeker').on('click', function () {

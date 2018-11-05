@@ -12,6 +12,7 @@ var timer;
 const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
 
 async function main(username, password) {
+  console.log("[login] google begin");
   driver = await new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
@@ -20,7 +21,7 @@ async function main(username, password) {
 
   const window = driver.getWindowHandle();
   await driver.switchTo().window(window);
-  await driver.manage().window().setRect({ 'x': 560, 'y': 0, 'width': 560, 'height': 1050 });
+  await driver.manage().window().setRect({ 'x': 560, 'y': 0, 'width': 1120, 'height': 1050 });
 
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//a[@id="gb_70"]'), 1000)));
   await driver.findElement(By.xpath('//a[@id="gb_70"]')).click();

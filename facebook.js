@@ -14,10 +14,6 @@ var timer;
 const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
 
 async function main(username, password) {
-  // driver = await new webdriver.Builder()
-  //   .withCapabilities(webdriver.Capabilities.chrome())
-  //   .setChromeOptions(new chrome.Options().addArguments("--disable-notifications"))
-  //   .build();
   driver = new Builder()
     .forBrowser('chrome')
     .setChromeOptions(new chrome.Options().addArguments("--disable-notifications"))
@@ -174,7 +170,7 @@ async function setting(index) {
   // await new Promise(resolve => setTimeout(resolve, 2000));
 
   //------------------------------------
-  // ads ettings
+  // ads settings
   //------------------------------------
   await driver.get('https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen').catch(function (err) {
     console.log("b : " + err);
@@ -188,7 +184,11 @@ async function setting(index) {
     console.log("edit : " + err);
   })
 
+  await new Promise(resolve => setTimeout(resolve, 2000));
   editYourinfo("relationship", "true");
+  editYourinfo("office", "false");
+  editYourinfo("profession", "false");
+  editYourinfo("academic_background", "false");
 
 
 
@@ -262,13 +262,6 @@ async function editPrivacySettings(pagename, name, whocansee) {
   }).catch(function (err) {
     console.log("aaa " + err);
   })
-  // await new Promise(resolve => setTimeout(resolve, 2000));
-  // const publishingRange = await driver.findElement(By.xpath('//div[@class="_6a _43_1 _21o-"]')).then(function(e) {
-  //   console.log("click A");
-  //   e.click();
-  // }).catch(function(err) {
-  //   console.error("error A : " + err);
-  // })
 
   await new Promise(resolve => setTimeout(resolve, 2000));
   var publicClassName;
@@ -320,17 +313,18 @@ async function editYourinfo(name, value) {
 
   // const elem = await driver.findElement(By.xpath('//div[@id="yourinfo"]/div/div/div/div/div/div/div[@value="' + index + '"]')).then(function (e) {
   const elem = await driver.findElement(By.xpath('//div[@value="' + index + '" and @role="checkbox"]')).then(function (e) {
-
+    e.getAttribute('aria-checked').then(function(ee){
+      if ((ee == "false" && value == "true") || (ee == "true" && value == "false")) {
+        console.log("click !!");
+        e.click();
+      }  
+    }).catch(function(errr){
+      console.log("get attribute error : " + errr);
+    })
   }).catch(function (err) {
     console.log("AAA : " + err);
   })
-  await elem.getAttribute('aria-checked').then(function (e) {
-    if ((e == "false" && value == "true") || (e == "true" && value == "false")) {
-      elem.click();
-    }
-  }).catch(function (err) {
-    console.log("error yourinfo : " + err);
-  })
+  await new Promise(resolve => setTimeout(resolve, 1000));
 }
 
 
@@ -365,10 +359,6 @@ function toBoolean(str) {
 var username = "yoroiomedetou@gmail.com";
 var password = "ekuadoru0727";
 
-// main(username, password)
-//   .then((result) => {
-//
-//   });
 
 exports.login = function (user, pass) {
   username = user;

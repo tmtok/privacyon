@@ -32,14 +32,16 @@ io.sockets.on('connection', function (socket) {
       facebookMod.login(data.faceMailAddress, data.facePassword);
       // console.log("received username : " + data.googleMailAddress + " pass : " + data.googlePassword);
       facebookEnabled = true;
-    } else if (data.googleMailAddress != "" && data.googlePassword != "") {
-      googleMod.login(data.googleMailAddress, data.googlePassword).then(function(text){
+    }
+    if (data.googleMailAddress != "" && data.googlePassword != "") {
+      googleMod.login(data.googleMailAddress, data.googlePassword).then(function (text) {
         console.log("google login result : " + text);
-      }).catch(function(err){
+      }).catch(function (err) {
         console.log("error : " + err);
       })
       googleEnabled = true;
-    } else if (data.twitterUsername != "" && data.twitterPassword != "") {
+    }
+    if (data.twitterUsername != "" && data.twitterPassword != "") {
       console.log("twitter login : " + data.twitterUsername + " " + data.twitterPassword);
       twitterMod.login(data.twitterUsername, data.twitterPassword);
       twitterEnabled = true;
@@ -50,7 +52,7 @@ io.sockets.on('connection', function (socket) {
     console.log("lifestyle : " + index);
     if (twitterEnabled == true) {
       twitterEnabled = false;
-      twitterMod.privacy_setting(0);
+      twitterMod.privacy_setting(index);
     }
     if (googleEnabled == true) {
       var text = googleMod.privacy_setting(0);
@@ -58,7 +60,7 @@ io.sockets.on('connection', function (socket) {
       googleEnabled = false;
     }
     if (facebookEnabled == true) {
-      // facebookMod.privacy_setting(index);
+      facebookMod.privacy_setting(index);
       facebookEnabled = false;
     }
   })

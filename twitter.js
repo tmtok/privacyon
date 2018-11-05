@@ -12,13 +12,14 @@ var password;
 var isChangedSettings = false;
 
 async function main() {
+  console.log("[login] twitter begin");
   driver = await new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
 
   const window = driver.getWindowHandle();
   await driver.switchTo().window(window);
-  // await driver.manage().window().setRect({ 'x': 0, 'y': 0, 'width': 560, 'height': 1050 });
+  await driver.manage().window().setRect({ 'x': 0, 'y': 0, 'width': 560, 'height': 1050 });
 
 
   await driver.get('http://twitter.com/login')
