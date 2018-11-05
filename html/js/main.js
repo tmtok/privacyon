@@ -43,12 +43,27 @@ $(document).ready(function () {
 
   $('#signupButton').on('click', function () {
     var obj = new Object();
-    obj.faceMailAddress = document.getElementById('faceMailAddress').value;
-    obj.facePassword = document.getElementById('facePassword').value;
-    obj.twitterPassword = document.getElementById('twitterPassword').value;
-    obj.twitterUsername = document.getElementById('twitterUsername').value;
-    obj.googlePassword = document.getElementById('googlePassword').value;
-    obj.googleMailAddress = document.getElementById('googleMailAddress').value;
+    if (document.getElementById("faceCheckBox").checked == true) {
+      obj.faceMailAddress = document.getElementById('faceMailAddress').value;
+      obj.facePassword = document.getElementById('facePassword').value;
+    } else {
+      obj.faceMailAddress = "";
+      obj.facePassword = "";
+    }
+    if (document.getElementById("twitterCheckBox").checked == true) {
+      obj.twitterPassword = document.getElementById('twitterPassword').value;
+      obj.twitterUsername = document.getElementById('twitterUsername').value;
+    } else {
+      obj.twitterPassword = "";
+      obj.twitterUsername = "";
+    }
+    if (document.getElementById("googleCheckBox").checked == true) {
+      obj.googlePassword = document.getElementById('googlePassword').value;
+      obj.googleMailAddress = document.getElementById('googleMailAddress').value;
+    } else {
+      obj.googlePassword = "";
+      obj.googleMailAddress = "";
+    }
     console.log(obj.faceMailAddress);
     socket.emit('sign_up', obj);
   })

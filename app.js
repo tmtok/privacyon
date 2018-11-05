@@ -55,7 +55,7 @@ io.sockets.on('connection', function (socket) {
       twitterMod.privacy_setting(index);
     }
     if (googleEnabled == true) {
-      var text = googleMod.privacy_setting(0);
+      var text = googleMod.privacy_setting(index);
       console.log("google result : " + text);
       googleEnabled = false;
     }
