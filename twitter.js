@@ -11,7 +11,9 @@ var username;
 var password;
 var isChangedSettings = false;
 
-exports.login = async function(username, password) {
+exports.login = async function(user, pswd) {
+  username = user;
+  password = pswd;
   console.log("[login] twitter begin");
   driver = await new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
@@ -309,6 +311,8 @@ exports.privacy_setting = async function(index) {
   if (isChangedSettings == true) {
     await saveSettings(false);
   }
+  driver.quit();
+  return true;
 
 }
 
@@ -317,7 +321,10 @@ exports.privacy_setting = async function(index) {
 // privacy settings
 //==========================================
 async function editCheckbox(toggle, id) {
-  const elem = await driver.findElement(By.xpath('//input[@id=\"' + id + '\"]'));
+  await new Promise(resolve => setTimeout(resolve, 500));
+  const elem = await driver.findElement(By.xpath('//input[@id=\"' + id + '\"]')).catch((err) =>{
+    console.error("not found checkbox ID : " + err);
+  })
   await elem.getAttribute('checked').then(function (val) {
     var bVal = Boolean(val);
     if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
@@ -376,6 +383,7 @@ async function saveSettings(confirm) {
   // save settings
   await new Promise(resolve => setTimeout(resolve, 1500));
   await driver.findElement(By.xpath("//button[@id='settings_save']")).click();
+  await new Promise(resolve => setTimeout(resolve, 500));
 
   if (confirm == true) {
     const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']"));

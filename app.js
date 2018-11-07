@@ -66,6 +66,7 @@ io.sockets.on('connection', function (socket) {
         twitterEnabled = false;
         sendSettingStatus(result);
       }).catch((err) => {
+        console.log("[twitter] privacy setting failed");        
         twitterEnabled = false;
         sendSettingStatus(false);
       })
@@ -76,6 +77,7 @@ io.sockets.on('connection', function (socket) {
         googleEnabled = false;
         sendSettingStatus(result);
       }).catch((err) => {
+        console.log("[google] privacy setting failed");
         googleEnabled = false;
         sendSettingStatus(false);
       });

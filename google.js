@@ -103,6 +103,7 @@ exports.privacy_setting = async function(index) {
   await driver.get("https://aboutme.google.com/");
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@jsname="Wa08Re"]'), 1000))).catch(function (err) {
     console.log("aboutme page not found " + err);
+    driver.quit();
     return false;
   });
 
@@ -110,6 +111,7 @@ exports.privacy_setting = async function(index) {
     e.click();
   }).catch(function (err) {
     console.error("cannot click " + err);
+    driver.quit();
     return false;
   })
 
@@ -120,6 +122,7 @@ exports.privacy_setting = async function(index) {
     console.log("cancel add information");
   }).catch(function (err) {
     console.log("add information not found ");
+    driver.quit();
     return false;
   })
 
@@ -128,6 +131,7 @@ exports.privacy_setting = async function(index) {
     driver.executeScript("arguments[0].click()", e);
   }).catch(function (err) {
     console.log("aaa");
+    driver.quit();
     return false;
   })
 
@@ -148,6 +152,7 @@ exports.privacy_setting = async function(index) {
       break;
   }
   console.log("[google] privacy setting completed!");
+  driver.quit();
   return true;
 }
 
