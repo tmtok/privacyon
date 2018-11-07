@@ -11,7 +11,7 @@ var timer;
 
 const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
 
-async function main(username, password) {
+exports.login = async function(username, password) {
   console.log("[login] google begin");
   driver = await new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
@@ -49,48 +49,15 @@ async function main(username, password) {
     }
     console.log("text : " + text);
     driver.quit();
-    return text;
+    return false;
   }).catch(function (err) {
-
+    return true;
   });
 
-
-  // async.whilst(
-  //   function() {
-  //     driver.findElement(By.xpath('//h1[@id="headingText"]')).getText().then(function(text) {
-  //       console.log("text : " + text);
-  //       if(text == "本人であることの確認"){
-  //         return true;
-  //         console.log("auth error : 本人認証が必要です");
-  //       }else if(text == "ようこそ"){
-  //         return false;
-  //       }
-  //     }).catch(function(err) {
-  //     })
-  //   },
-  //   function(callback) {
-  //
-  //   },
-  //   function(err, n) {
-  //     console.log("error whilst : " + err);
-  //   }
-  // );
-  // await driver.findElement(By.xpath('//h1[@id="headingText"]')).getText().then(function(text){
-  //   console.log("text : " + text);
-  //   if(text == "本人であることの確認"){
-  //     console.log("auth error : 本人認証が必要です");
-  //     driver.quit();
-  //   }
-  // }).catch(function(err){
-  //
-  // })
-
-
   // await driver.quit();
-  return "";
 }
 
-async function setting(index) {
+exports.privacy_setting = async function(index) {
   await new Promise(resolve => setTimeout(resolve, 1000));
   await driver.get('https://myaccount.google.com/activitycontrols');
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//body[@id="yDmH0d"]'), 1000))).catch(function (err) {
@@ -136,12 +103,14 @@ async function setting(index) {
   await driver.get("https://aboutme.google.com/");
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@jsname="Wa08Re"]'), 1000))).catch(function (err) {
     console.log("aboutme page not found " + err);
+    return false;
   });
 
   await driver.findElement(By.xpath('//div[@jsname="Wa08Re"]/content/div')).then(function (e) {
     e.click();
   }).catch(function (err) {
     console.error("cannot click " + err);
+    return false;
   })
 
   await new Promise(resolve => setTimeout(resolve, 1000));
@@ -151,6 +120,7 @@ async function setting(index) {
     console.log("cancel add information");
   }).catch(function (err) {
     console.log("add information not found ");
+    return false;
   })
 
   await driver.findElement(By.xpath('//div[@jsname="LgbsSe"]')).then(function (e) {
@@ -158,6 +128,7 @@ async function setting(index) {
     driver.executeScript("arguments[0].click()", e);
   }).catch(function (err) {
     console.log("aaa");
+    return false;
   })
 
   switch (index) {
@@ -176,7 +147,8 @@ async function setting(index) {
     default:
       break;
   }
-  return "";
+  console.log("[google] privacy setting completed!");
+  return true;
 }
 
 async function editCheckbox(toggle, sid) {
@@ -330,23 +302,19 @@ function toBoolean(str) {
 var username = "";
 var password = "";
 
-exports.login = async function (user, pass) {
-  username = user;
-  password = pass;
-  await main(username, password)
-    .then((result) => {
-      return true;
-    });
-}
+// exports.login = async function (user, pass) {
+//   username = user;
+//   password = pass;
+//   await main(username, password)
+//     .then((result) => {
+//       return true;
+//     });
+// }
 
-exports.privacy_setting = async function (index) {
-  await setting(index)
-    .then((result) => {
-      return true;
-    })
-}
+// exports.privacy_setting = async function (index) {
+//   await setting(index)
+//     .then((result) => {
+//       return true;
+//     })
+// }
 
-// main(username, password)
-//   .then((result) => {
-//
-//   });

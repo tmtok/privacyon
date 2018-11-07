@@ -11,29 +11,22 @@ var username;
 var password;
 var isChangedSettings = false;
 
-async function main() {
+exports.login = async function(username, password) {
   console.log("[login] twitter begin");
   driver = await new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
 
-  const window = driver.getWindowHandle();
+  const window = await driver.getWindowHandle();
   await driver.switchTo().window(window);
   await driver.manage().window().setRect({ 'x': 0, 'y': 0, 'width': 560, 'height': 1050 });
 
 
   await driver.get('http://twitter.com/login')
-  console.log("AAA");
   await new Promise(resolve => setTimeout(resolve, 2000));
-  // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@name="session[username_or_email]"]'), 1000))).then(function(e){
-  //   console.log("AAAB");
-  // }).catch(function (err) {
-  //   console.log(err);
-  // })
-  console.log("BBB");
   await driver.findElement(By.xpath('//input[@name="session[username_or_email]" and @class="js-username-field email-input js-initial-focus"]')).then(function (e) {
     console.log("send username");
-    e.sendKeys(username).catch(function(errr){
+    e.sendKeys(username).catch(function (errr) {
       console.log("ERROR : " + errr);
     })
   }).catch(function (err) {
@@ -48,7 +41,7 @@ async function main() {
   await pass.sendKeys(Key.ENTER);
 }
 
-async function setting(index) {
+exports.privacy_setting = async function(index) {
   isChangedSettings = false;
 
   //==========================================
@@ -424,18 +417,18 @@ async function saveSettings(confirm) {
 
 
 
-exports.login = function (user, pass) {
-  username = user;
-  password = pass;
-  main()
-    .then((result) => {
-      return true;
-    });
-}
+// exports.login = function (user, pass) {
+//   username = user;
+//   password = pass;
+//   main()
+//     .then((result) => {
+//       return true;
+//     });
+// }
 
-exports.privacy_setting = function (index) {
-  setting(index)
-    .then((result) => {
-      return true;
-    })
-}
+// exports.privacy_setting = function (index) {
+//   setting(index)
+//     .then((result) => {
+//       return true;
+//     })
+// }

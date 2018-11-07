@@ -13,15 +13,21 @@ var timer;
 
 const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
 
-async function main(username, password) {
-  driver = new Builder()
+// async function main(username, password) {
+exports.login = async function(username, password) {
+  driver = await new Builder()
     .forBrowser('chrome')
     .setChromeOptions(new chrome.Options().addArguments("--disable-notifications"))
     .build();
 
   await driver.get('https://www.facebook.com/');
 
-  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="email"]'), 1000)));
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="email"]'), 1000))).then(function (e) {
+    return true;
+  }).catch(function (err) {
+    return false;
+  })
+
   // await driver.findElement(By.xpath('//a[@id="gb_70"]')).click();
 
   //input username
@@ -30,7 +36,7 @@ async function main(username, password) {
   // await driver.findElement(By.xpath('//input[@id="pass"]')).sendKeys(Key.ENTER);
 }
 
-async function setting(index) {
+exports.privacy_setting = async function(index) {
   console.log("begin settig : " + index);
   //------------------------------------
   // privacy settings
@@ -313,12 +319,12 @@ async function editYourinfo(name, value) {
 
   // const elem = await driver.findElement(By.xpath('//div[@id="yourinfo"]/div/div/div/div/div/div/div[@value="' + index + '"]')).then(function (e) {
   const elem = await driver.findElement(By.xpath('//div[@value="' + index + '" and @role="checkbox"]')).then(function (e) {
-    e.getAttribute('aria-checked').then(function(ee){
+    e.getAttribute('aria-checked').then(function (ee) {
       if ((ee == "false" && value == "true") || (ee == "true" && value == "false")) {
         console.log("click !!");
         e.click();
-      }  
-    }).catch(function(errr){
+      }
+    }).catch(function (errr) {
       console.log("get attribute error : " + errr);
     })
   }).catch(function (err) {
@@ -360,18 +366,19 @@ var username = "yoroiomedetou@gmail.com";
 var password = "ekuadoru0727";
 
 
-exports.login = function (user, pass) {
-  username = user;
-  password = pass;
-  main(username, password)
-    .then((result) => {
-      return true;
-    });
-}
+// exports.login = function (user, pass) {
+//   username = user;
+//   password = pass;
+//   main(username, password)
+//     .then((result) => {
+//       console.log("result : " + result);
+//       return result;
+//     });
+// }
 
-exports.privacy_setting = function (index) {
-  setting(index)
-    .then((result) => {
-      return true;
-    })
-}
+// exports.privacy_setting = function (index) {
+//   setting(index)
+//     .then((result) => {
+//       return true;
+//     })
+// }

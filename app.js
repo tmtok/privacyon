@@ -16,9 +16,12 @@ console.log("http server listening on %d", port);
 var facebookEnabled = false;
 var twitterEnabled = false;
 var googleEnabled = false;
+var settingFailed = false;
 
 io.sockets.on('connection', function (socket) {
   console.log("connect");
+  socket.emit('test', "test");
+  // sendSettingStatus(true);
   socket.on('emit_from_client', function (data) {
     console.log("receive");
     socket.emit('console_out', data);
@@ -28,9 +31,13 @@ io.sockets.on('connection', function (socket) {
   })
 
   socket.on('sign_up', function (data) {
+    settingFailed = false;
     if (data.faceMailAddress != "" && data.facePassword != "") {
-      facebookMod.login(data.faceMailAddress, data.facePassword);
-      // console.log("received username : " + data.googleMailAddress + " pass : " + data.googlePassword);
+      const a = facebookMod.login(data.faceMailAddress, data.facePassword).then(function (e) {
+        console.log("facebook a : " + e);
+      }).catch(function (err) {
+        console.log("error facebook : " + err);
+      })
       facebookEnabled = true;
     }
     if (data.googleMailAddress != "" && data.googlePassword != "") {
@@ -42,8 +49,11 @@ io.sockets.on('connection', function (socket) {
       googleEnabled = true;
     }
     if (data.twitterUsername != "" && data.twitterPassword != "") {
-      console.log("twitter login : " + data.twitterUsername + " " + data.twitterPassword);
-      twitterMod.login(data.twitterUsername, data.twitterPassword);
+      twitterMod.login(data.twitterUsername, data.twitterPassword).then(function (result) {
+        console.log("[twitter] login : " + result);
+      }).catch(function (err) {
+
+      })
       twitterEnabled = true;
     }
   })
@@ -51,17 +61,43 @@ io.sockets.on('connection', function (socket) {
   socket.on('select_lifestyle', function (index) {
     console.log("lifestyle : " + index);
     if (twitterEnabled == true) {
-      twitterEnabled = false;
-      twitterMod.privacy_setting(index);
+      twitterMod.privacy_setting(index).then(function (result) {
+        console.log("[twitter] privacy setting result : " + result);
+        twitterEnabled = false;
+        sendSettingStatus(result);
+      }).catch((err) => {
+        twitterEnabled = false;
+        sendSettingStatus(false);
+      })
     }
     if (googleEnabled == true) {
-      var text = googleMod.privacy_setting(index);
-      console.log("google result : " + text);
-      googleEnabled = false;
+      googleMod.privacy_setting(index).then(function (result) {
+        console.log("[google] privacy setting result : " + result);
+        googleEnabled = false;
+        sendSettingStatus(result);
+      }).catch((err) => {
+        googleEnabled = false;
+        sendSettingStatus(false);
+      });
     }
     if (facebookEnabled == true) {
-      facebookMod.privacy_setting(index);
-      facebookEnabled = false;
+      facebookMod.privacy_setting(index).then((result) => {
+        console.log("[facebook] privacy setting result : " + result);
+        facebookEnabled = false;
+        sendSettingStatus(result);
+      }).catch((err) => {
+        facebookEnabled = false;
+        sendSettingStatus(false);
+      })
     }
   })
 });
+
+function sendSettingStatus(result) {
+  if (result && !twitterEnabled && !googleEnabled && !facebookEnabled && !settingFailed) {
+    io.sockets.emit('setting_status', true);
+  } else if (!result) {
+    settingFailed = true;
+    io.sockets.emit('setting_status', false);
+  }
+}

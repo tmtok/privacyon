@@ -20,26 +20,7 @@ $(document).ready(function () {
   // var socket = io.connect("https://movinglight-settings.herokuapp.com/");
   socket = io.connect(thisURL);
 
-  // $('#save-groupIndex').css('background-color', '#BBB');
-  // $('#effect-save-id').css('background-color', '#BBB');
-  // $('#effect-download').css('background-color', '#BBB');
-  // $('#download-groupIndex').css('background-color', '#BBB');
-  // $('#download-groupIndex').on('click', function() {
-  //   if (!dlGroupIndexEnabled) {
-  //     return false;
-  //   }
-  // });
-  // $('#effect-download').on('click', function() {
-  //   if (!effectDownloadEnabled) {
-  //     return false;
-  //   }
-  // })
-  // $('#scene-preset-button').on('click', function() {
-  //   document.getElementById('scene-preset-button').disabled = true;
-  // })
-
   receiveSocket();
-  // sendSocket();
 
   $('#signupButton').on('click', function () {
     var obj = new Object();
@@ -102,6 +83,19 @@ $(document).ready(function () {
 function receiveSocket() {
   socket.on("console_out", function (data) {
     console.log("msg : " + data);
+  })
+
+  socket.on("test",function(data){
+    console.log("test : " + data);
+  })
+
+  socket.on("setting_status",function(result){
+    console.log("received setting status : " + result);
+    if(result == true){
+      window.location.href = '../settingcomplete.html';
+    }else {
+      window.location.href = '../settingerror.html';
+    }
   })
 
 }
