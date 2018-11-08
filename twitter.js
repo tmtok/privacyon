@@ -11,7 +11,7 @@ var username;
 var password;
 var isChangedSettings = false;
 
-exports.login = async function(user, pswd) {
+exports.login = async function (user, pswd) {
   username = user;
   password = pswd;
   console.log("[login] twitter begin");
@@ -43,7 +43,7 @@ exports.login = async function(user, pswd) {
   await pass.sendKeys(Key.ENTER);
 }
 
-exports.privacy_setting = async function(index) {
+exports.privacy_setting = async function (index) {
   isChangedSettings = false;
 
   //==========================================
@@ -322,13 +322,13 @@ exports.privacy_setting = async function(index) {
 //==========================================
 async function editCheckbox(toggle, id) {
   await new Promise(resolve => setTimeout(resolve, 500));
-  const elem = await driver.findElement(By.xpath('//input[@id=\"' + id + '\"]')).catch((err) =>{
+  const elem = await driver.findElement(By.xpath('//input[@id=\"' + id + '\"]')).catch((err) => {
     console.error("not found checkbox ID : " + err);
   })
   await elem.getAttribute('checked').then(function (val) {
     var bVal = Boolean(val);
     if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
-      elem.click();
+      driver.executeScript("arguments[0].click()", elem);
       if (isChangedSettings != true) {
         isChangedSettings = true;
       }
@@ -342,7 +342,7 @@ async function editCheckboxName(toggle, name) {
   await elem.getAttribute('checked').then(function (val) {
     var bVal = Boolean(val);
     if ((bVal == false && toggle == true) || (bVal == true && toggle == false)) {
-      elem.click();
+      driver.executeScript("arguments[0].click()", elem);
       if (isChangedSettings != true) {
         isChangedSettings = true;
       }

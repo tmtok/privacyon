@@ -43,39 +43,41 @@ exports.privacy_setting = async function(index) {
   //------------------------------------
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="userNav"]'), 1000))).catch(function (err) {
     console.log("a " + err);
+    return false;
   })
 
-  // await driver.get('https://www.facebook.com/settings?tab=privacy').catch(function (err) {
-  //   console.log("b : " + err);
-  // })
+  await driver.get('https://www.facebook.com/settings?tab=privacy').catch(function (err) {
+    console.log("b : " + err);
+    return false;
+  })
 
-  // switch (index) {
-  //   case 0:
-  //   case 2:
-  //   case 3:
-  //     await editPrivacySettings("privacy", "composer", "onlyMe");
-  //     await editPrivacySettings("privacy", "canfriend", "friendsOfFriends");
-  //     await editPrivacySettings("privacy", "friendlist", "onlyMe");
-  //     await editPrivacySettings("privacy", "findemail", "friends");
-  //     await editPrivacySettings("privacy", "findphone", "friends");
-  //     break;
-  //   case 1:
-  //     await editPrivacySettings("privacy", "composer", "friends");
-  //     await editPrivacySettings("privacy", "canfriend", "friendsOfFriends");
-  //     await editPrivacySettings("privacy", "friendlist", "friends");
-  //     await editPrivacySettings("privacy", "findemail", "friends");
-  //     await editPrivacySettings("privacy", "findphone", "friends");
+  switch (index) {
+    case 0:
+    case 2:
+    case 3:
+      await editPrivacySettings("privacy", "composer", "onlyMe");
+      await editPrivacySettings("privacy", "canfriend", "friendsOfFriends");
+      await editPrivacySettings("privacy", "friendlist", "onlyMe");
+      await editPrivacySettings("privacy", "findemail", "friends");
+      await editPrivacySettings("privacy", "findphone", "friends");
+      break;
+    case 1:
+      await editPrivacySettings("privacy", "composer", "friends");
+      await editPrivacySettings("privacy", "canfriend", "friendsOfFriends");
+      await editPrivacySettings("privacy", "friendlist", "friends");
+      await editPrivacySettings("privacy", "findemail", "friends");
+      await editPrivacySettings("privacy", "findphone", "friends");
 
-  //     break;
-  //   case 4:
-  //     await editPrivacySettings("privacy", "composer", "public");
-  //     await editPrivacySettings("privacy", "canfriend", "public");
-  //     await editPrivacySettings("privacy", "friendlist", "public");
-  //     await editPrivacySettings("privacy", "findemail", "public");
-  //     await editPrivacySettings("privacy", "findphone", "public");
-  //     break;
-  // }
-  // await new Promise(resolve => setTimeout(resolve, 2000));
+      break;
+    case 4:
+      await editPrivacySettings("privacy", "composer", "public");
+      await editPrivacySettings("privacy", "canfriend", "public");
+      await editPrivacySettings("privacy", "friendlist", "public");
+      await editPrivacySettings("privacy", "findemail", "public");
+      await editPrivacySettings("privacy", "findphone", "public");
+      break;
+  }
+  await new Promise(resolve => setTimeout(resolve, 2000));
 
   // // await editPrivacySettings("search", "public");
   // // await new Promise(resolve => setTimeout(resolve, 2000));
@@ -204,10 +206,10 @@ exports.privacy_setting = async function(index) {
 
 async function editCheckbox(toggle, sid) {
   await new Promise(resolve => setTimeout(resolve, 500));
-  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@jsname="ilpChd" and @data-sid=\"' + sid + '\"]'), 1000))).catch(function (err) {
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id=\"' + sid + '\"]'), 1000))).catch(function (err) {
     console.log("find checkbox error");
   });
-  const elem = await driver.findElement(By.xpath('//div[@jsname="ilpChd" and @data-sid=\"' + sid + '\"]'));
+  const elem = await driver.findElement(By.xpath('//div[@id=\"' + sid + '\"]'));
   var isChecked = toBoolean("false");
   await elem.getAttribute('aria-checked').then(function (val) {
     isChecked = toBoolean(val);
@@ -217,32 +219,9 @@ async function editCheckbox(toggle, sid) {
   })
 
   if ((isChecked == false && toggle == true) || (isChecked == true && toggle == false)) {
-    await elem.click();
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@data-id="EBS5u"]/content/span'), 1000))).catch(function (err) {
-      console.log("cannot find checkbox confirm " + err);
+    await elem.click().catch(function(err){
+      console.error("click checkbox error : " + err);
     })
-    const e = await driver.findElement(By.xpath('//div[@data-id="EBS5u"]/content/span')).catch(function (err) {
-      console.log("cannot find checkbox confirm 2 " + err);
-    })
-    await clickConfirmButton(e);
-
-    async.whilst(
-      function () {
-        return driver.findElement(By.xpath('//div[@data-id="EBS5u"]/content/span')).then(function (data) {
-          return true;
-        }).catch(function (err) {
-          return false;
-        })
-      },
-      function (callback) {
-
-      },
-      function (err, n) {
-        console.log("error whilst : " + err);
-      }
-    );
-    await new Promise(resolve => setTimeout(resolve, 500));
   }
 }
 
