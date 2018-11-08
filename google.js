@@ -38,21 +38,21 @@ exports.login = async function(username, password) {
   await driver.findElement(By.xpath('//div[@id="passwordNext"]')).click();
 
 
-  await new Promise(resolve => setTimeout(resolve, 2000));
-  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//h1[@id="headingText"]'), 1000))).catch(function (err) {
+  // await new Promise(resolve => setTimeout(resolve, 2000));
+  // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//h1[@id="headingText"]'), 1000))).catch(function (err) {
 
-  });
+  // });
 
-  await driver.findElement(By.xpath('//h1[@id="headingText" and @jsname="z6sL2b"]')).getText().then(function (text) {
-    if (text == "本人であることの確認") {
-      console.log("本人認証error");
-    }
-    console.log("text : " + text);
-    driver.quit();
-    return false;
-  }).catch(function (err) {
-    return true;
-  });
+  // await driver.findElement(By.xpath('//h1[@id="headingText" and @jsname="z6sL2b"]')).getText().then(function (text) {
+  //   if (text == "本人であることの確認") {
+  //     console.log("本人認証error");
+  //   }
+  //   console.log("text : " + text);
+  //   driver.quit();
+  //   return false;
+  // }).catch(function (err) {
+  //   return true;
+  // });
 
   // await driver.quit();
 }
