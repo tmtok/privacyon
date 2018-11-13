@@ -56,22 +56,22 @@ $(document).ready(function () {
 
   $('#select_attentionseeker').on('click', function () {
     console.log("pressed attentionseeker");
-    socket.emit('select_lifestyle', 1);
+    socket.emit('select_lifestyle', 4);
   })
 
   $('#select_greedtrend').on('click', function () {
     console.log("pressed greedtrend");
-    socket.emit('select_lifestyle', 2);
+    socket.emit('select_lifestyle', 3);
   })
 
   $('#select_fastidiousmyway').on('click', function () {
     console.log("pressed fastidiousmyway");
-    socket.emit('select_lifestyle', 3);
+    socket.emit('select_lifestyle', 2);
   })
 
   $('#select_friendsforever').on('click', function () {
     console.log("pressed friendsforever");
-    socket.emit('select_lifestyle', 4);
+    socket.emit('select_lifestyle', 1);
   })
 
 });

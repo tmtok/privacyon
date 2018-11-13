@@ -165,11 +165,11 @@ async function editCheckbox(toggle, sid) {
   var isChecked = toBoolean("false");
   await elem.getAttribute('aria-checked').then(function (val) {
     isChecked = toBoolean(val);
-    // console.log("aria-checked sid : " + sid + " val(Boolean):" + toBoolean(val) + " val:" + val);
   }).catch(function (err) {
     console.log("aria-checked error " + err);
   })
 
+  // console.log("sid : " + sid + " isChecked : " + isChecked + " toogle : " + toggle);
   if ((isChecked == false && toggle == true) || (isChecked == true && toggle == false)) {
     await elem.click();
     await new Promise(resolve => setTimeout(resolve, 2000));

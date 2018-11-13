@@ -88,6 +88,7 @@ io.sockets.on('connection', function (socket) {
         facebookEnabled = false;
         sendSettingStatus(result);
       }).catch((err) => {
+        console.log("[facebook] privacy setting failed " + err);
         facebookEnabled = false;
         sendSettingStatus(false);
       })
