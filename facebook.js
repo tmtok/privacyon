@@ -38,7 +38,6 @@ exports.login = async function (username, password) {
 }
 
 exports.privacy_setting = async function (index) {
-  console.log("begin settig : " + index);
   //------------------------------------
   // privacy settings
   //------------------------------------
@@ -141,13 +140,13 @@ exports.privacy_setting = async function (index) {
     default:
       break;
   }
+  console.log("allowFollowersClassName : " + allowFollowersClassname);
   // allow followers 
   await clickElement("//a[contains(@class,'_4o_4 _p _4jy3 _517h _51sy')]").catch((err) => {
 
   })
   await new Promise(resolve => setTimeout(resolve, 1000));
-  await clickElement("//a[@class='_54nc _54nu']/span/i[contains(@class," + allowFollowersClassname + ")]").catch((err) => {
-
+  await clickElement("//a[@class='_54nc _54nu']/span/i[contains(@class,'" + allowFollowersClassname + "')]").catch((err) => {
   })
   await new Promise(resolve => setTimeout(resolve, 2000));
 
@@ -156,166 +155,170 @@ exports.privacy_setting = async function (index) {
   //------------------------------------
   // ads settings
   //------------------------------------
-  // await driver.get('https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen').catch(function (err) {
-  //   console.log("b : " + err);
-  // })
+  await driver.get('https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen').catch(function (err) {
+    console.log("b : " + err);
+  })
 
-  // await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 2000));
 
-  // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="yourinfo"]/div/div[@data-testid="ads_settings_expandable_profile"]'), 20000))).catch(function (err) {
-  //   console.log("a " + err);
-  //   return false;
-  // })
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="yourinfo"]/div/div[@data-testid="ads_settings_expandable_profile"]'), 20000))).catch(function (err) {
+    console.log("a " + err);
+    return false;
+  })
 
-  // await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 2000));
 
-  // await driver.findElement(By.xpath('//div[@id="yourinfo"]/div/div[@data-testid="ads_settings_expandable_profile"]')).then(function (e) {
-  //   // await driver.findElement(By.id('yourinfo')).then(function (e) {
-  //   driver.executeScript("arguments[0].click()", e);
-  // }).catch(function (err) {
-  //   console.log("edit : " + err);
-  // })
+  await driver.findElement(By.xpath('//div[@id="yourinfo"]/div/div[@data-testid="ads_settings_expandable_profile"]')).then(function (e) {
+    driver.executeScript("arguments[0].click()", e);
+  }).catch(function (err) {
+    console.log("edit : " + err);
+  })
 
-  // await new Promise(resolve => setTimeout(resolve, 2000));
-  // editYourinfo("relationship", "true");
-  // editYourinfo("office", "false");
-  // editYourinfo("profession", "false");
-  // editYourinfo("academic_background", "false");
-
-  // await new Promise(resolve => setTimeout(resolve, 2000));
-  // await driver.findElement(By.xpath('//div[@id="settings"]/div/div[@data-testid="ads_settings_expandable_profile"]')).then(function (e) {
-  //   console.log("clicked allow third party");
-  //   // e.click();
-  //   // driver.executeScript("arguments[0].click()", e);
-  // }).catch(function (err) {
-  //   console.log("edit : " + err);
-  // })
-
-  // await clickElement('//div[@data-testid="ads_settings_expandable_container"]').then((e) => {
-  // }).catch((err) => {
-  // })
-
-  // await clickElement('//div[@data-testid="ads_settings_third_party_selector"]/div/button').then((e) => {
-  // }).catch((err) => {
-  // })
-
-  // await new Promise(resolve => setTimeout(resolve, 2000));
-
-  // var allowThirdParty = false;
-  // var allowThirdPartyId = "ads_settings_allow_third_party";
-  // switch (index) {
-  //   case 0:
-  //   case 1:
-  //   case 2:
-  //     allowThirdParty = true;
-  //     break;
-  //   case 3:
-  //   case 4:
-  //     allowThirdParty = false;
-  //     allowThirdPartyId = "ads_settings_not_allow_third_party";
-  //     break;
-  // }
-
-  // await clickElement('//li[@data-testid="' + allowThirdPartyId + '"]/div').then((e) => {
-  // }).catch((err) => {
-  //   return false;
-  // })
-
-  // await new Promise(resolve => setTimeout(resolve, 3000));
-
-  // //-------------------------------
-  // // third party settings 2
-  // //-------------------------------
-  // await clickElement('//div[@class="_3-8p"]/div/div[@role="presentation"]').then((e) => {
-  // }).catch((err) => {
-  //   return false;
-  // })
-
-  // await clickElement('//div[@class="_3-8p"]/div/div/div/div[@class="_3-8y"]/div/button').then((e) => {
-  // }).catch((err) => {
-  //   return false;
-  // })
-
-  // var thirdParty2Text = "許可する";
-  // switch (index) {
-  //   case 0:
-  //   case 1:
-  //   case 2:
-
-  //     break;
-  //   case 3:
-  //   case 4:
-  //     thirdParty2Text = "許可する";
-  //     break;
-  // }
-
-  // await new Promise(resolve => setTimeout(resolve, 3000));
-
-  // await driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="true"]/div')).getText().then((text) => {
-  //   console.log("text : " + text);
-  //   if (text != thirdParty2Text) {
-  //     driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="false"]/div')).then((ee) => {
-  //       console.log("change completed");
-  //       driver.executeScript("arguments[0].click()", ee);
-  //     }).catch((errr) => {
-  //     })
-  //   }
-  //   else {
-  //     clickElement('//div[@class="_3-8p"]/div/div/div/div[@class="_3-8y"]/div/button').then((e) => {
-  //     }).catch((err) => {
-  //       return false;
-  //     })
-  //   }
-  // }).catch((err) => {
-  //   console.log("cannot find : " + err);
-  //   return false;
-  // })
-
-  // await new Promise(resolve => setTimeout(resolve, 3000));
-
-  // await clickElement('//div[@class="_3-8p"]/div/div[@role="presentation"]').then((e) => {
-  // }).catch((err) => {
-  //   return false;
-  // })
-  // await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  switch (index) {
+    case 0:
+    case 1:
+    case 2:
+      editYourinfo("relationship", "false");
+      editYourinfo("office", "false");
+      editYourinfo("profession", "false");
+      editYourinfo("academic_background", "false");
+      break;
+    case 3:
+    case 4:
+      editYourinfo("relationship", "true");
+      editYourinfo("office", "true");
+      editYourinfo("profession", "true");
+      editYourinfo("academic_background", "true");
+      break;
+  }
 
 
-  // //-------------------------------
-  // // third party settings 3
-  // //-------------------------------
-  // await clickElement('//div[@class="_3-98"]/div/div[@role="presentation"]').then((e) => {
-  // }).catch((err) => {
-  //   return false;
-  // })
-  // await new Promise(resolve => setTimeout(resolve, 1000));
-  // await clickElement('//div[@class="_3-98"]/div/div/div/div[contains(@class,"_3-8y")]/div/button').then((e) => {
-  // }).catch((err) => {
-  //   return false;
-  // })
+  //----------------------------------------------
+  // パートナーからのデータに基づく広告
+  //----------------------------------------------
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  await driver.findElement(By.xpath('//div[@id="settings"]/div/div[@data-testid="ads_settings_expandable_profile"]')).then(function (e) {
+    console.log("clicked allow third party");
+    // e.click();
+    // driver.executeScript("arguments[0].click()", e);
+  }).catch(function (err) {
+    console.log("edit : " + err);
+  })
 
-  // var thirdParty3Text = "非公開";
-  // switch (index) {
-  //   case 1:
-  //   case 4:
-  //     thirdParty3Text = "友達のみ";
-  //     break;
-  // }
+  await clickElement('//div[@data-testid="ads_settings_expandable_container"]').then((e) => {
+  }).catch((err) => {
+  })
 
-  // await new Promise(resolve => setTimeout(resolve, 3000));
+  await clickElement('//div[@data-testid="ads_settings_third_party_selector"]/div/button').then((e) => {
+  }).catch((err) => {
+  })
 
-  // await driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="true"]/div')).getText().then((text) => {
-  //   console.log("text : " + text);
-  //   if (text != thirdParty3Text) {
-  //     driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="false"]/div')).then((ee) => {
-  //       console.log("change completed");
-  //       driver.executeScript("arguments[0].click()", ee);
-  //     }).catch((errr) => {
-  //     })
-  //   }
-  // }).catch((err) => {
-  //   console.log("cannot find : " + err);
-  //   return false;
-  // })
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
+  var allowThirdPartyId = "ads_settings_not_allow_third_party";
+  switch (index) {
+    case 3:
+    case 4:
+      allowThirdPartyId = "ads_settings_allow_third_party";
+      break;
+  }
+
+  await clickElement('//li[@data-testid="' + allowThirdPartyId + '"]/div').then((e) => {
+  }).catch((err) => {
+    return false;
+  })
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  //--------------------------------------------
+  // facebookグループ企業の製品でのアクティブティ...
+  //--------------------------------------------
+  await clickElement('//div[@class="_3-8p"]/div/div[@role="presentation"]').then((e) => {
+  }).catch((err) => {
+    return false;
+  })
+
+  await clickElement('//div[@class="_3-8p"]/div/div/div/div[@class="_3-8y"]/div/button').then((e) => {
+  }).catch((err) => {
+    return false;
+  })
+
+  var thirdParty2Text = "許可しない";
+  switch (index) {
+    case 3:
+    case 4:
+      thirdParty2Text = "許可する";
+      break;
+  }
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  await driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="true"]/div')).getText().then((text) => {
+    console.log("text : " + text);
+    if (text != thirdParty2Text) {
+      driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="false"]/div')).then((ee) => {
+        console.log("change completed");
+        driver.executeScript("arguments[0].click()", ee);
+      }).catch((errr) => {
+      })
+    }
+    else {
+      clickElement('//div[@class="_3-8p"]/div/div/div/div[@class="_3-8y"]/div/button').then((e) => {
+      }).catch((err) => {
+        return false;
+      })
+    }
+  }).catch((err) => {
+    console.log("cannot find : " + err);
+    return false;
+  })
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  await clickElement('//div[@class="_3-8p"]/div/div[@role="presentation"]').then((e) => {
+  }).catch((err) => {
+    return false;
+  })
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+
+  //-------------------------------
+  // third party settings 3
+  //-------------------------------
+  await clickElement('//div[@class="_3-98"]/div/div[@role="presentation"]').then((e) => {
+  }).catch((err) => {
+    return false;
+  })
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  await clickElement('//div[@class="_3-98"]/div/div/div/div[contains(@class,"_3-8y")]/div/button').then((e) => {
+  }).catch((err) => {
+    return false;
+  })
+
+  var thirdParty3Text = "非公開";
+  switch (index) {
+    case 1:
+    case 4:
+      thirdParty3Text = "友達のみ";
+      break;
+  }
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  await driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="true"]/div')).getText().then((text) => {
+    console.log("text : " + text);
+    if (text != thirdParty3Text) {
+      driver.findElement(By.xpath('//div[@class="_z4i"]/div/div/div/div/ul/li/div[@aria-checked="false"]/div')).then((ee) => {
+        console.log("change completed");
+        driver.executeScript("arguments[0].click()", ee);
+      }).catch((errr) => {
+      })
+    }
+  }).catch((err) => {
+    console.log("cannot find : " + err);
+    return false;
+  })
 
   return true;
 }
@@ -446,14 +449,26 @@ async function editPrivacySettingsCheckbox(pagename, name, toggle) {
   await new Promise(resolve => setTimeout(resolve, 2000));
 
   await driver.findElement(By.xpath('//input[@id="search_filter_public"]')).then((e) => {
-    e.getAttribute('checked').then(function (currentToggle) {
-      console.log("checkbox : " + currentToggle + " : " + toggle);
-      if (currentToggle != toggle) {
-        driver.executeScript("arguments[0].click()", e);
-      }
-    }).catch(function (er) {
-      console.log("er : " + er);
-    })
+    if (e.isSelected()) {
+      console.log("checkbox is selected");
+      if (!toggle) driver.executeScript("arguments[0].click()", e);
+    } else {
+      if (toggle) driver.executeScript("arguments[0].click()", e);
+      console.log("checkbox is not selected");
+    }
+    // e.getAttribute('class').then(function (val) {
+    //   console.log("class : " + val);
+    //   var currentToggle = true;
+    //   if(val == "_5f0v"){
+    //     currentToggle = false;
+    //   }
+    //   console.log("checkbox : " + currentToggle + " : " + toggle);
+    //   if (currentToggle != toggle) {
+    //     driver.executeScript("arguments[0].click()", e);
+    //   }
+    // }).catch(function (er) {
+    //   console.log("er : " + er);
+    // })
   }).catch(function (err) {
     console.log("aaa " + err);
   })
