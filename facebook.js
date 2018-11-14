@@ -319,7 +319,7 @@ exports.privacy_setting = async function (index) {
     console.log("cannot find : " + err);
     return false;
   })
-
+  driver.quit();
   return true;
 }
 
