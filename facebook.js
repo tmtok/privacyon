@@ -60,7 +60,7 @@ exports.privacy_setting = async function (index) {
       await editPrivacySettings("privacy", "friendlist", "自分のみ");
       await editPrivacySettings("privacy", "findemail", "友達");
       await editPrivacySettings("privacy", "findphone", "友達");
-      await editPrivacySettingsCheckbox("privacy", "search", false);
+      // await editPrivacySettingsCheckbox("privacy", "search", false);
       break;
     case 1:
       await editPrivacySettings("privacy", "composer", "友達");
@@ -68,7 +68,7 @@ exports.privacy_setting = async function (index) {
       await editPrivacySettings("privacy", "friendlist", "友達");
       await editPrivacySettings("privacy", "findemail", "友達");
       await editPrivacySettings("privacy", "findphone", "友達");
-      await editPrivacySettingsCheckbox("privacy", "search", false);
+      // await editPrivacySettingsCheckbox("privacy", "search", false);
       break;
     case 4:
       await editPrivacySettings("privacy", "composer", "公開");
@@ -76,7 +76,7 @@ exports.privacy_setting = async function (index) {
       await editPrivacySettings("privacy", "friendlist", "公開");
       await editPrivacySettings("privacy", "findemail", "公開");
       await editPrivacySettings("privacy", "findphone", "公開");
-      await editPrivacySettingsCheckbox("privacy", "search", true);
+      // await editPrivacySettingsCheckbox("privacy", "search", true);
       break;
   }
   await new Promise(resolve => setTimeout(resolve, 2000));
