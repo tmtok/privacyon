@@ -149,19 +149,15 @@ exports.privacy_setting = async function (index) {
   // privacy and security (personalization)
   //==========================================
   await driver.get('https://twitter.com/settings/personalization');
-  await new Promise(resolve => setTimeout(resolve, 500));
-  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="allow_ads_personalization"]'), 1000)));
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 3000));
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="allow_ads_personalization"]'), 1000))).catch((err) => {
+    console.error("cannot find 'personalization'");
+    return false;
+  })
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
   switch (index) {
     case 0:
-      await editCheckbox(true, "allow_ads_personalization");
-      await editCheckbox(false, "allow_logged_out_device_personalization");
-      await editCheckbox(false, "allow_location_history_personalization");
-      await editCheckbox(false, "use_cookie_personalization");
-      await editCheckbox(false, "allow_sharing_data_for_third_party_personalization");
-      break;
-
     case 1:
       await editCheckbox(false, "allow_ads_personalization");
       await editCheckbox(false, "allow_logged_out_device_personalization");
@@ -209,8 +205,8 @@ exports.privacy_setting = async function (index) {
       await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(false, "send_new_direct_text_email");
       await editCheckbox(false, "send_shared_tweet_email");
-      await editDropdown(false, "network_digest_schedule", '1');
-      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(true, "network_digest_schedule");
+      await editDropdown("network_digest_schedule", '1');
       await editCheckbox(false, "send_resurrection_email_1");
       await editCheckbox(false, "send_partner_email");
       await editCheckbox(false, "send_survey_email");
@@ -222,8 +218,8 @@ exports.privacy_setting = async function (index) {
       await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(true, "send_new_direct_text_email");
       await editCheckbox(true, "send_shared_tweet_email");
-      await editDropdown(true, "network_digest_schedule", '1');
-      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(true, "network_digest_schedule");
+      await editDropdown("network_digest_schedule", '1');
       await editCheckbox(false, "send_resurrection_email_1");
       await editCheckbox(false, "send_partner_email");
       await editCheckbox(false, "send_survey_email");
@@ -235,8 +231,8 @@ exports.privacy_setting = async function (index) {
       await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(false, "send_new_direct_text_email");
       await editCheckbox(false, "send_shared_tweet_email");
-      await editDropdown(false, "network_digest_schedule", '1');
-      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(true, "network_digest_schedule");
+      await editDropdown("network_digest_schedule", '1');
       await editCheckbox(false, "send_resurrection_email_1");
       await editCheckbox(false, "send_partner_email");
       await editCheckbox(false, "send_survey_email");
@@ -248,7 +244,8 @@ exports.privacy_setting = async function (index) {
       await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(false, "send_new_direct_text_email");
       await editCheckbox(false, "send_shared_tweet_email");
-      await editDropdown(false, "network_digest_schedule", '1');
+      await editCheckbox(true, "network_digest_schedule");
+      await editDropdown("network_digest_schedule", '2');
       // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
       await editCheckbox(false, "send_resurrection_email_1");
       await editCheckbox(false, "send_partner_email");
@@ -261,8 +258,8 @@ exports.privacy_setting = async function (index) {
       await editCheckbox(true, "send_network_activity_email");
       await editCheckbox(false, "send_new_direct_text_email");
       await editCheckbox(false, "send_shared_tweet_email");
-      await editDropdown(false, "network_digest_schedule", '1');
-      // await editCheckbox(true, "network-digest-schedule-dropdown"); network_digest_schedule
+      await editCheckbox(true, "network_digest_schedule");
+      await editDropdown("network_digest_schedule", '4');
       await editCheckbox(true, "send_resurrection_email_1");
       await editCheckbox(false, "send_partner_email");
       await editCheckbox(false, "send_survey_email");
@@ -351,11 +348,29 @@ async function editCheckboxName(toggle, name) {
   console.log("edited : " + name);
 }
 
-async function editDropdown(toggle, id, val) {
-  const elem = await driver.findElement(By.xpath('//select[@data-attribute=\"' + id + '\"]'));
-  await elem.sendKeys(val).catch(function (err) {
-    console.log("dropdown error");
+async function editDropdown(id, val) {
+  const elem = await driver.findElement(By.xpath('//select[@data-attribute="' + id + '"]')).sendKeys(val).then((e)=>{
+    console.log("clicked dropdown element");
+    // driver.executeScript("arguments[0].click()",e);
+  }).catch((err)=>{
+    console.error("dropdown error 1 : " + err);
   })
+  // await new Promise(resolve => setTimeout(resolve, 1000));
+  // await driver.findElement(By.xpath('//select[@data-attribute="' + id + '"]/option[@value="'+ val+ '"]')).then((e)=>{
+  //   console.log("clicked dropdown option");
+  //   driver.executeScript("arguments[0].click()",e);
+  // }).catch((err)=>{
+  //   console.error("dropdown error 2 : " + err);
+  // })
+  // await elem.sendKeys(val).catch(function (err) {
+  //   console.log("dropdown error");
+  // })
+  // await driver.findElement(By.xpath('//input[@id="' + id + '"]')).then((e) => {
+  //   console.log("succsess dropdown " + id + " : " + val);
+  //   driver.executeScript("document.querySelector('#" + id + "').setAttribute('value', '" + val + "')");
+  // }).catch((err) => {
+  //   console.log("error dropdown " + err );
+  // })
 }
 
 async function editMailNotification(toggle) {
@@ -389,38 +404,10 @@ async function saveSettings(confirm) {
     const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']"));
     await auth_pass.sendKeys(password);
     await auth_pass.sendKeys(Key.ENTER);
-    await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000)));
+    // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch((err) => {
+    //   console.log("error saveSettings : " + err);
+    // })
   }
-  // const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']")).then(function(val) {
-  //   val.sendKeys(password);
-  // }).then(function(val2){
-  //   val.sendKeys(Key.ENTER);
-  // }).then(function(val3){
-  //   driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch(function(err){
-  //     return;
-  //   })
-  // }) .catch(function(err) {
-  //   console.log("save error");
-  //   isChangedSettings = false;
-  // });
-
-
-
-  // await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(password).catch(function(err){
-  //   return;
-  // })
-  // // await new Promise(resolve => setTimeout(resolve, 500));
-  // await driver.findElement(By.xpath("//input[@id='auth_password']")).sendKeys(Key.ENTER).catch(function(err){
-  //   return;
-  // })
-  //
-  // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch(function(err){
-  //   console.log("save not completed");
-  //   return;
-  // })
-  // console.log("save complete");
-  // // await driver.await(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000)));
-  // isChangedSettings = false;
 }
 
 
