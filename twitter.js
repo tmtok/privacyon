@@ -90,8 +90,8 @@ exports.privacy_setting = async function (index) {
     case 2:
       await editCheckbox(false, "user_protected");
       await editCheckbox(false, "user_geo_enabled");
-      await editCheckbox(true, "user_discoverable_by_email");
-      await editCheckbox(true, "user_mobile_discoverable");
+      await editCheckbox(false, "user_discoverable_by_email");
+      await editCheckbox(false, "user_mobile_discoverable");
       // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
       await editCheckbox(true, "allow_media_tagging_none");
       // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
@@ -123,7 +123,7 @@ exports.privacy_setting = async function (index) {
 
     case 4:
       await editCheckbox(false, "user_protected");
-      await editCheckbox(false, "user_geo_enabled");
+      await editCheckbox(true, "user_geo_enabled");
       await editCheckbox(true, "user_discoverable_by_email");
       await editCheckbox(true, "user_mobile_discoverable");
       // allow_media_tagging_none , allow_media_tagging_following , allow_media_tagging_all
@@ -229,8 +229,8 @@ exports.privacy_setting = async function (index) {
       break;
     case 2:
       await editCheckbox(true, "send_network_activity_email");
-      await editCheckbox(false, "send_new_direct_text_email");
-      await editCheckbox(false, "send_shared_tweet_email");
+      await editCheckbox(true, "send_new_direct_text_email");
+      await editCheckbox(true, "send_shared_tweet_email");
       await editCheckbox(true, "network_digest_schedule");
       await editDropdown("network_digest_schedule", '1');
       await editCheckbox(false, "send_resurrection_email_1");
@@ -301,7 +301,7 @@ exports.privacy_setting = async function (index) {
       await editCheckbox(false, "filter_default_profile_image_enabled");
       await editCheckbox(false, "filter_no_confirmed_email_enabled");
       await editCheckbox(false, "filter_no_confirmed_phone_enabled");
-      await editCheckbox(true, "quality_filter_enabled");
+      await editCheckbox(false, "quality_filter_enabled");
       break;
     default:
   }

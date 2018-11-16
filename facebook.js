@@ -110,7 +110,6 @@ exports.privacy_setting = async function (index) {
       await editPrivacySettings("timeline", "others", "公開");
       await editPrivacySettings("timeline", "tagging", "友達");
       await editPrivacySettings("timeline", "expansion", "自分のみ");
-      // await editPrivacySettings("timeline", "suggestions", "自分のみ");
       break;
 
     default:
@@ -313,13 +312,14 @@ exports.privacy_setting = async function (index) {
         console.log("change completed");
         driver.executeScript("arguments[0].click()", ee);
       }).catch((errr) => {
+        console.log("cannot click : " + errr);
       })
     }
   }).catch((err) => {
     console.log("cannot find : " + err);
     return false;
   })
-  driver.quit();
+  // driver.quit();
   return true;
 }
 
@@ -330,7 +330,7 @@ async function editPrivacySettings(pagename, name, whocansee) {
   var sectionName;
   var alreadySelected = false;
   await driver.findElement(By.xpath('//a[@href="/settings?tab=' + pagename + '&section=' + name + '"]/span[@class="fbSettingsListItemContent fcg"]/div/div[@class="_nlm fwb"]')).getText().then((text) => {
-    console.log("find current text : " + text + " : " + whocansee);
+    console.log("find current text : " + name + " : " + text + " : " + whocansee);
     if (whocansee == text) alreadySelected = true;
   });
   if (alreadySelected) return true;
@@ -357,7 +357,8 @@ async function editPrivacySettings(pagename, name, whocansee) {
   var publicClassName;
   switch (whocansee) {
     case "公開":
-      publicClassName = "_4pmk";
+      publicClassName = "_4pml";
+      // publicClassName = "_4pmk";
       break;
     case "友達":
       publicClassName = "_2930";
