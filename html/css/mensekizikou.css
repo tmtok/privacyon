@@ -43,12 +43,12 @@ div {
 }
 .mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 154px;
-  height              : auto;
-  width               : auto;
+  top                 : 160px;
+  height              : 100px;
+  width               : 300;
   position            : absolute;
   margin              : 0;
-  left                : 64px;
+  left                : 40px;
   -ms-transform       : rotate(0deg); /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
@@ -61,13 +61,10 @@ div {
 }
 .mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042:hover {
   transform           : scale(1.1);
+  overflow            : auto;
+	 height: 30vh;
 }
-.mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042 .span1 {
-  
-}
-.mensekizikou .u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042u3042 .span2 {
-  
-}
+
 .mensekizikou .menseki {
   background-color    : rgba(255,255,255,0.0);
   top                 : 106px;
