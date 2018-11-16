@@ -98,4 +98,10 @@ function receiveSocket() {
     }
   })
 
+  socket.on("setting_end",function(index){
+    var lifestyleIndex = index + 1;
+    console.log("received settting end : " + lifestyleIndex);
+    window.location.href = '../finish' + lifestyleIndex + '.html';
+  })
+
 }

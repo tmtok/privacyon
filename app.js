@@ -17,6 +17,7 @@ var facebookEnabled = false;
 var twitterEnabled = false;
 var googleEnabled = false;
 var settingFailed = false;
+var lifestyleIndex = 0;
 
 io.sockets.on('connection', function (socket) {
   console.log("connect");
@@ -60,6 +61,7 @@ io.sockets.on('connection', function (socket) {
 
   socket.on('select_lifestyle', function (index) {
     console.log("lifestyle : " + index);
+    lifestyleIndex = index;
     if (twitterEnabled == true) {
       twitterMod.privacy_setting(index).then(function (result) {
         console.log("[twitter] privacy setting result : " + result);
@@ -99,6 +101,10 @@ io.sockets.on('connection', function (socket) {
 function sendSettingStatus(result) {
   if (result && !twitterEnabled && !googleEnabled && !facebookEnabled && !settingFailed) {
     io.sockets.emit('setting_status', true);
+    setTimeout(function(){
+      console.log("send setting_end " + lifestyleIndex);
+      io.sockets.emit('setting_end',lifestyleIndex);
+    },5000);
   } else if (!result) {
     settingFailed = true;
     io.sockets.emit('setting_status', false);
