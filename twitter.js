@@ -54,7 +54,7 @@ exports.privacy_setting = async function (index) {
   await new Promise(resolve => setTimeout(resolve, 2000));
   switch (index) {
     case 0:
-      await editCheckbox(false, "user_protected");
+      await editCheckbox(true, "user_protected");
       await editCheckbox(false, "user_geo_enabled");
       await editCheckbox(false, "user_discoverable_by_email");
       await editCheckbox(false, "user_mobile_discoverable");
