@@ -21,6 +21,11 @@ exports.login = async function (username, password) {
     .setChromeOptions(new chrome.Options().addArguments("--disable-notifications"))
     .build();
 
+  const window = await driver.getWindowHandle();
+  await driver.switchTo().window(window);
+  await driver.manage().window().setRect({ 'x': 1020, 'y': 0, 'width': 560, 'height': 1050 });
+
+
   await driver.get('https://www.facebook.com/');
 
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//input[@id="email"]'), 1000))).then(function (e) {
@@ -319,7 +324,7 @@ exports.privacy_setting = async function (index) {
     console.log("cannot find : " + err);
     return false;
   })
-  // driver.quit();
+  driver.quit();
   return true;
 }
 
