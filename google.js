@@ -307,19 +307,3 @@ function toBoolean(str) {
 var username = "";
 var password = "";
 
-// exports.login = async function (user, pass) {
-//   username = user;
-//   password = pass;
-//   await main(username, password)
-//     .then((result) => {
-//       return true;
-//     });
-// }
-
-// exports.privacy_setting = async function (index) {
-//   await setting(index)
-//     .then((result) => {
-//       return true;
-//     })
-// }
-

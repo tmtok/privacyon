@@ -2,20 +2,6 @@ var socket;
 // var thisURL = "https://privacyon.herokuapp.com";
 var thisURL = "http://localhost:5000";
 
-var loadSheetEnabled = true;
-var saveGroupIndexEnabled = false;
-var dlGroupIndexEnabled = false;
-var effectSaveIdEnabled = false;
-var effectDownloadEnabled = false;
-var elInstallationDropArea;
-var elInstallationFile;
-var elUniverse;
-var elTrash;
-var reader = new FileReader();
-var readFileContentsList = new Array();
-var readFileNameList = new Array();
-var readFileIndexList = new Array();
-
 $(document).ready(function () {
   // var socket = io.connect("https://movinglight-settings.herokuapp.com/");
   socket = io.connect(thisURL);
@@ -50,23 +36,8 @@ $(document).ready(function () {
   })
 
   $('#select_safetyfirst').on('click', function () {
-    console.log("pressed safetyfirst 2 AAA");
+    console.log("pressed safetyfirst");
     socket.emit('select_lifestyle', 0);
-  })
-
-  $('#select_attentionseeker').on('click', function () {
-    console.log("pressed attentionseeker");
-    socket.emit('select_lifestyle', 4);
-  })
-
-  $('#select_greedtrend').on('click', function () {
-    console.log("pressed greedtrend");
-    socket.emit('select_lifestyle', 3);
-  })
-
-  $('#select_fastidiousmyway').on('click', function () {
-    console.log("pressed fastidiousmyway");
-    socket.emit('select_lifestyle', 2);
   })
 
   $('#select_friendsforever').on('click', function () {
@@ -74,6 +45,20 @@ $(document).ready(function () {
     socket.emit('select_lifestyle', 1);
   })
 
+  $('#select_fastidiousmyway').on('click', function () {
+    console.log("pressed fastidiousmyway");
+    socket.emit('select_lifestyle', 2);
+  })
+
+  $('#select_greedtrend').on('click', function () {
+    console.log("pressed greedtrend");
+    socket.emit('select_lifestyle', 3);
+  })
+
+  $('#select_attentionseeker').on('click', function () {
+    console.log("pressed attentionseeker");
+    socket.emit('select_lifestyle', 4);
+  })
 });
 
 
@@ -85,23 +70,18 @@ function receiveSocket() {
     console.log("msg : " + data);
   })
 
-  socket.on("test",function(data){
-    console.log("test : " + data);
-  })
-
-  socket.on("setting_status",function(result){
+  socket.on("setting_status", function (result) {
     console.log("received setting status : " + result);
-    if(result == true){
+    if (result == true) {
       window.location.href = '../settingcomplete.html';
-    }else {
+    } else {
       window.location.href = '../settingerror.html';
     }
   })
 
-  socket.on("setting_end",function(index){
+  socket.on("setting_end", function (index) {
     var lifestyleIndex = index + 1;
     console.log("received settting end : " + lifestyleIndex);
     window.location.href = '../finish' + lifestyleIndex + '.html';
   })
-
 }

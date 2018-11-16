@@ -14,7 +14,7 @@ var timer;
 
 const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
 
-// async function main(username, password) {
+// ログイン処理
 exports.login = async function (username, password) {
   driver = await new Builder()
     .forBrowser('chrome')
@@ -22,8 +22,8 @@ exports.login = async function (username, password) {
     .build();
 
   const window = await driver.getWindowHandle();
-  await driver.switchTo().window(window);
-  await driver.manage().window().setRect({ 'x': 1020, 'y': 0, 'width': 560, 'height': 1050 });
+  await driver.switchTo().window(window); // ウィンドウを最前面に
+  await driver.manage().window().setRect({ 'x': 1020, 'y': 0, 'width': 560, 'height': 1050 }); // ウィンドウ位置を指定
 
 
   await driver.get('https://www.facebook.com/');
@@ -36,7 +36,7 @@ exports.login = async function (username, password) {
 
   // await driver.findElement(By.xpath('//a[@id="gb_70"]')).click();
 
-  //input username
+  //アイパスを入力
   await driver.findElement(By.xpath('//input[@id="email"]')).sendKeys(username);
   await driver.findElement(By.xpath('//input[@id="pass"]')).sendKeys(password);
   await driver.findElement(By.xpath('//input[@id="pass"]')).sendKeys(Key.ENTER);
@@ -385,107 +385,6 @@ async function editPrivacySettings(pagename, name, whocansee) {
 }
 
 
-//---------------------------------------
-// edit followers (not used)
-//---------------------------------------
-async function editPrivacySettingsFollowers(pagename, name, datatestid, whocansee) {
-  var sectionName;
-
-  await driver.findElement(By.xpath('//a[@href="/settings?tab=' + pagename + '&section=' + name + '"]')).then(function (e) {
-    e.click();
-  }).catch(function (err) {
-    console.log("edit : " + err);
-  })
-  await new Promise(resolve => setTimeout(resolve, 2000));
-
-  await driver.findElement(By.xpath('//a[@href="/settings?tab=' + pagename + '&section=' + name + '"]/'))
-
-  var ownerid;
-  await driver.findElement(By.xpath('//li[@data-testid=' + datatestid + ']/div/div/div/div/div/form/div')).then(function (e) {
-    e.getAttribute('id').then(function (id) {
-      ownerid = id;
-      // console.log("id : " + id);
-    }).catch(function (er) {
-      console.log("er : " + er);
-    })
-    e.click();
-  }).catch(function (err) {
-    console.log("aaa " + err);
-  })
-
-  await new Promise(resolve => setTimeout(resolve, 2000));
-  var publicClassName;
-  switch (whocansee) {
-    case "公開":
-      publicClassName = "_4pmk";
-      break;
-    case "友達":
-      publicClassName = "_2930";
-      break;
-    case "友達の友達":
-      publicClassName = "_1z-t";
-      break;
-    case "自分のみ":
-      publicClassName = "_2932";
-      break;
-    default:
-  }
-
-
-  // await driver.findElement(By.xpath('//li[contains(@class, "' + publicClassName + '")]/a/span/span[@class="_54nh _4chm _48u0"]')).then(function(e) {
-  await driver.findElement(By.xpath('//div[@data-ownerid="' + ownerid + '"]/div/div/div/div/div/div/div/ul/li[contains(@class, "' + publicClassName + '")]/a')).then(function (e) {
-    driver.executeScript("arguments[0].click()", e);
-  }).catch(function (err) {
-    console.log("edit : " + err);
-  })
-  await new Promise(resolve => setTimeout(resolve, 2000));
-}
-
-//-----------------------------------
-// edit privacySettings checkbox
-//-----------------------------------
-async function editPrivacySettingsCheckbox(pagename, name, toggle) {
-  var sectionName;
-
-  await driver.findElement(By.xpath('//a[@href="/settings?tab=' + pagename + '&section=' + name + '"]')).then(function (e) {
-    e.click();
-  }).catch(function (err) {
-    console.log("edit : " + err);
-  })
-  await new Promise(resolve => setTimeout(resolve, 2000));
-
-  await driver.findElement(By.xpath('//input[@id="search_filter_public"]')).then((e) => {
-    if (e.isSelected()) {
-      console.log("checkbox is selected");
-      if (!toggle) driver.executeScript("arguments[0].click()", e);
-    } else {
-      if (toggle) driver.executeScript("arguments[0].click()", e);
-      console.log("checkbox is not selected");
-    }
-    // e.getAttribute('class').then(function (val) {
-    //   console.log("class : " + val);
-    //   var currentToggle = true;
-    //   if(val == "_5f0v"){
-    //     currentToggle = false;
-    //   }
-    //   console.log("checkbox : " + currentToggle + " : " + toggle);
-    //   if (currentToggle != toggle) {
-    //     driver.executeScript("arguments[0].click()", e);
-    //   }
-    // }).catch(function (er) {
-    //   console.log("er : " + er);
-    // })
-  }).catch(function (err) {
-    console.log("aaa " + err);
-  })
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  await clickElement("//input[@name='turn_off']").then((e) => {
-    console.log("confirm");
-  }).catch((err) => {
-  });
-
-  await new Promise(resolve => setTimeout(resolve, 2000));
-}
 
 //---------------------------------------
 // edit Ads (yourinfo)
@@ -546,8 +445,6 @@ function toBoolean(str) {
 
 
 
-// var username = "tanami17@iamas.ac.jp";
-// var password = "netlife2018";
-var username = "yoroiomedetou@gmail.com";
-var password = "ekuadoru0727";
+// var username = "yoroiomedetou@gmail.com";
+// var password = "ekuadoru0727";
 

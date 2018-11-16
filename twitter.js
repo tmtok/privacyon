@@ -404,26 +404,6 @@ async function saveSettings(confirm) {
     const auth_pass = await driver.findElement(By.xpath("//input[@id='auth_password']"));
     await auth_pass.sendKeys(password);
     await auth_pass.sendKeys(Key.ENTER);
-    // await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//div[@id="settings-alert-box"]'), 1000))).catch((err) => {
-    //   console.log("error saveSettings : " + err);
-    // })
   }
 }
 
-
-
-// exports.login = function (user, pass) {
-//   username = user;
-//   password = pass;
-//   main()
-//     .then((result) => {
-//       return true;
-//     });
-// }
-
-// exports.privacy_setting = function (index) {
-//   setting(index)
-//     .then((result) => {
-//       return true;
-//     })
-// }
