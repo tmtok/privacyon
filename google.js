@@ -21,7 +21,7 @@ exports.login = async function(username, password) {
 
   const window = driver.getWindowHandle();
   await driver.switchTo().window(window);
-  await driver.manage().window().setRect({ 'x': 560, 'y': 0, 'width': 1120, 'height': 1050 });
+  await driver.manage().window().setRect({ 'x': 560, 'y': 0, 'width': 560, 'height': 1050 });
 
   await driver.wait(until.elementIsVisible(driver.findElement(By.xpath('//a[@id="gb_70"]'), 1000)));
   await driver.findElement(By.xpath('//a[@id="gb_70"]')).click();

@@ -23,7 +23,7 @@ exports.login = async function (username, password) {
 
   const window = await driver.getWindowHandle();
   await driver.switchTo().window(window); // ウィンドウを最前面に
-  await driver.manage().window().setRect({ 'x': 1020, 'y': 0, 'width': 560, 'height': 1050 }); // ウィンドウ位置を指定
+  await driver.manage().window().setRect({ 'x': 1120, 'y': 0, 'width': 560, 'height': 1050 }); // ウィンドウ位置を指定
 
 
   await driver.get('https://www.facebook.com/');
