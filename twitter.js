@@ -41,6 +41,7 @@ exports.login = async function (user, pswd) {
   // await pass.sendKeys('123qwe');
   await pass.sendKeys(password);
   await pass.sendKeys(Key.ENTER);
+  return true;
 }
 
 exports.privacy_setting = async function (index) {
@@ -137,7 +138,6 @@ exports.privacy_setting = async function (index) {
       await editCheckbox(false, "user_nsfw_view");
       await editCheckbox(false, "user_nsfw_user");
       break;
-
     default:
 
   }
@@ -346,6 +346,21 @@ async function editCheckboxName(toggle, name) {
     }
   })
   console.log("edited : " + name);
+}
+
+async function clickElement(xpath) {
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath(xpath), 2000))).catch((err) => {
+    console.error("wait error " + xpath);
+  })
+  await driver.findElement(By.xpath(xpath)).then((e) => {
+    console.log("clicked " + xpath);
+    driver.executeScript("arguments[0].click()", e);
+    return true;
+  }).catch((err) => {
+    console.error("click error " + xpath);
+    return false;
+  });
+  return true;
 }
 
 async function editDropdown(id, val) {

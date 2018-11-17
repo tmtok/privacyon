@@ -40,6 +40,7 @@ exports.login = async function (username, password) {
   await driver.findElement(By.xpath('//input[@id="email"]')).sendKeys(username);
   await driver.findElement(By.xpath('//input[@id="pass"]')).sendKeys(password);
   await driver.findElement(By.xpath('//input[@id="pass"]')).sendKeys(Key.ENTER);
+  return true;
 }
 
 exports.privacy_setting = async function (index) {

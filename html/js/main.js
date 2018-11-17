@@ -79,6 +79,14 @@ function receiveSocket() {
     }
   })
 
+  socket.on("transition_lifestyle",function(data){
+    window.location.href = '../lifestyle.html';
+  })
+
+  socket.on("transition_setting",function(){
+    window.location.href = '../setting.html';
+  })
+
   socket.on("setting_end", function (index) {
     var lifestyleIndex = index + 1;
     console.log("received settting end : " + lifestyleIndex);
