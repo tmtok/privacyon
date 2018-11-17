@@ -43,18 +43,7 @@ exports.login = async function(username, password) {
 
   // });
 
-  // await driver.findElement(By.xpath('//h1[@id="headingText" and @jsname="z6sL2b"]')).getText().then(function (text) {
-  //   if (text == "本人であることの確認") {
-  //     console.log("本人認証error");
-  //   }
-  //   console.log("text : " + text);
-  //   driver.quit();
-  //   return false;
-  // }).catch(function (err) {
-  //   return true;
-  // });
-
-  // await driver.quit();
+  return true;
 }
 
 exports.privacy_setting = async function(index) {
@@ -126,14 +115,19 @@ exports.privacy_setting = async function(index) {
     return false;
   })
 
-  await driver.findElement(By.xpath('//div[@jsname="LgbsSe"]')).then(function (e) {
-    console.log("found");
-    driver.executeScript("arguments[0].click()", e);
-  }).catch(function (err) {
-    console.log("aaa");
+  await clickElement('//div[@jsname="LgbsSe"]').catch((err)=>{
+    console.error(err);
     driver.quit();
     return false;
-  })
+  });
+  // await driver.findElement(By.xpath('//div[@jsname="LgbsSe"]')).then(function (e) {
+  //   console.log("found");
+  //   driver.executeScript("arguments[0].click()", e);
+  // }).catch(function (err) {
+  //   console.log("aaa");
+  //   driver.quit();
+  //   return false;
+  // })
 
   switch (index) {
     case 0:
@@ -277,6 +271,20 @@ async function editAboutmeSettings(isPublic, name) {
   await new Promise(resolve => setTimeout(resolve, 1000));
 }
 
+async function clickElement(xpath) {
+  await driver.wait(until.elementIsVisible(driver.findElement(By.xpath(xpath), 2000))).catch((err) => {
+    console.error("wait error " + xpath);
+  })
+  await driver.findElement(By.xpath(xpath)).then((e) => {
+    console.log("clicked " + xpath);
+    driver.executeScript("arguments[0].click()", e);
+    return true;
+  }).catch((err) => {
+    console.error("click error " + xpath);
+    return false;
+  });
+  return true;
+}
 
 async function clickConfirmButton(e) {
   try {

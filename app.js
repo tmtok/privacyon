@@ -19,6 +19,10 @@ var googleEnabled = false;
 var settingFailed = false;
 var lifestyleIndex = 0;
 
+var facebookLoginRunning = false;
+var twitterLoginRunning = false;
+var googleLoginRunning = false;
+
 io.sockets.on('connection', function (socket) {
   console.log("connect");
   // socket.on('emit_from_client', function (data) {
@@ -31,19 +35,33 @@ io.sockets.on('connection', function (socket) {
 
   // 各サイトログイン処理
   socket.on('sign_up', function (data) {
+    if ((data.faceMailAddress != "" && data.facePassword != "") || (data.googleMailAddress != "" && data.googlePassword != "") || (data.twitterUsername != "" && data.twitterPassword != "")) {
+      console.log("now login");
+      io.sockets.emit('transition_setting', true);
+    }
     settingFailed = false;
     if (data.faceMailAddress != "" && data.facePassword != "") {
+      facebookLoginRunning = true;
       const a = facebookMod.login(data.faceMailAddress, data.facePassword).then(function (result) {
         console.log("[facebook] login result : " + result);
+        facebookLoginRunning = false;
+        sendLoginStatus(result);
       }).catch(function (err) {
         console.log("[facebook] login error : " + err);
+        facebookLoginRunning = false;
+        sendLoginStatus(false);
       })
       facebookEnabled = true;
     }
     if (data.googleMailAddress != "" && data.googlePassword != "") {
+      googleLoginRunning = true;
       googleMod.login(data.googleMailAddress, data.googlePassword).then(function (result) {
         console.log("[google] login result : " + result);
+        googleLoginRunning = false;
+        sendLoginStatus(result);
       }).catch(function (err) {
+        googleLoginRunning = false;
+        sendLoginStatus(false);
         console.log("[google] login error : " + err);
       })
       googleEnabled = true;
@@ -51,8 +69,12 @@ io.sockets.on('connection', function (socket) {
     if (data.twitterUsername != "" && data.twitterPassword != "") {
       twitterMod.login(data.twitterUsername, data.twitterPassword).then(function (result) {
         console.log("[twitter] login result : " + result);
+        twitterLoginRunning = false;
+        sendLoginStatus(result);
       }).catch(function (err) {
         console.log("[twitter] login error : " + err);
+        twitterLoginRunning = false;
+        sendLoginStatus(false);
       })
       twitterEnabled = true;
     }
@@ -68,7 +90,7 @@ io.sockets.on('connection', function (socket) {
         twitterEnabled = false;
         sendSettingStatus(result);
       }).catch((err) => {
-        console.log("[twitter] privacy setting failed " + err);        
+        console.log("[twitter] privacy setting failed " + err);
         twitterEnabled = false;
         sendSettingStatus(false);
       })
@@ -98,15 +120,24 @@ io.sockets.on('connection', function (socket) {
   })
 });
 
+function sendLoginStatus(result) {
+  if (result && !twitterLoginRunning && !googleLoginRunning && !facebookLoginRunning) {
+    console.log("login completed");
+    io.sockets.emit('transition_lifestyle', result);
+  } else if (!result) {
+    io.sockets.emit('transition_lifestyle', false);
+  }
+}
+
 function sendSettingStatus(result) {
   if (result && !twitterEnabled && !googleEnabled && !facebookEnabled && !settingFailed) {
     // 設定完了画面へ遷移
     io.sockets.emit('setting_status', true);
     // 設定完了画面の表示5秒後に、finish画面へ遷移
-    setTimeout(function(){
+    setTimeout(function () {
       console.log("send setting_end " + lifestyleIndex);
-      io.sockets.emit('setting_end',lifestyleIndex);
-    },5000);
+      io.sockets.emit('setting_end', lifestyleIndex);
+    }, 5000);
   } else if (!result) {
     // 設定失敗画面へ遷移
     settingFailed = true;
