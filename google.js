@@ -96,13 +96,13 @@ exports.privacy_setting = async function(index) {
     return false;
   });
 
-  await driver.findElement(By.xpath('//div[@jsname="Wa08Re"]/content/div')).then(function (e) {
-    e.click();
-  }).catch(function (err) {
-    console.error("cannot click " + err);
-    driver.quit();
-    return false;
-  })
+  // await driver.findElement(By.xpath('//div[@jsname="Wa08Re"]/content/div')).then(function (e) {
+  //   e.click();
+  // }).catch(function (err) {
+  //   console.error("cannot click " + err);
+  //   driver.quit();
+  //   return false;
+  // })
 
   await new Promise(resolve => setTimeout(resolve, 1000));
 
