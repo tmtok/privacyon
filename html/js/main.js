@@ -1,6 +1,6 @@
 var socket;
 // var thisURL = "https://privacyon.herokuapp.com";
-var thisURL = "http://localhost:5000";
+var thisURL = "http://192.168.1.121:5000";
 
 $(document).ready(function () {
   // var socket = io.connect("https://movinglight-settings.herokuapp.com/");
