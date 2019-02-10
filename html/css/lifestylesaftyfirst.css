@@ -25,21 +25,21 @@ div {
   -webkit-text-size-adjust: none;
 }
 .lifestylesaftyfirst .u80ccu666fu7070u8272 {
-  background-color    : rgba(229, 229, 229, 0.5);
-  top                 : 0px;
-  height              : 667px;
-  width               : 375px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  opacity             : 0.82;
+    background-color    : rgba(229, 229, 229, 0.5);
+    top                 : -2px;
+    height              : 667px;
+    width               : 375px;
+    position            : absolute;
+    margin              : 0;
+    left                : -27px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+    opacity             : 0.82;
 }
 .lifestylesaftyfirst .u8a73u7d30u67a0 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 70px;
+  top                 : 20px;
   height              : 527px;
   width               : 320px;
   position            : absolute;
@@ -137,16 +137,16 @@ div {
   transform           : scale(1.1);
 }
 .lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .background {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 42px;
-  width               : 208px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 0px;
+    height              : 42px;
+    width               : 208px;
+    position            : absolute;
+    margin              : 0;
+    left                : 1px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 .lifestylesaftyfirst .u8a73u7d30u67a0 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b1 .u3053u306eu30e9u30a4u30d5u30b9u30bfu30a4u30ebu306bu3059u308b {
   background-color    : rgba(255,255,255,0.0);

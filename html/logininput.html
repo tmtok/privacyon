@@ -5,69 +5,95 @@
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
         <link href="./css/logininput.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+        .logininput div div .navigation div #explanation p {
+    font-family: ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif;
+}
+        </style>
         <meta content="Launchpad by Anima" name="author">
         </meta>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <!-- <script src="/socket.io/socket.io.js"></script> -->
-        <script src="//192.168.1.121:5000/socket.io/socket.io.js"></script>
+        <script src="//192.168.1.1:5000/socket.io/socket.io.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
 <input id="anPageName" name="page" type="hidden" value="logininput"/>
 <form action="none" class="logininput" method="post" name="none">
+<div style="width: 375px; height: 100%; position:relative; margin:auto;">
   <div style="width: 375px; height: 100%; position:relative; margin:auto;">
-    <div class="logininput1">
-		
-      <div class="faceform"> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda141" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda142" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-        <input id="faceMailAddress" class="textmailaddress" name="textMailAddress" placeholder="Mail Address" disabled />
-        <input type="password" id="facePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
-      </div>
-      <div class="twitterform"> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1412" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1422" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-        <input id="twitterUsername" class="textusername" name="textUsername" placeholder="Username" disabled/>
-        <input type="password" id="twitterPassword" class="textpassword" name="textPassword" placeholder="Password" disabled/>
-        
-      </div>
-      <div class="googleform"> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1413" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1423" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-        <input type="password" id="googlePassword" class="textpassword" name="textPassword" placeholder="Password" disabled />
-        <input id="googleMailAddress" class="textmailadress" name="textMailAdress" placeholder="Mail Adress" disabled />
-      </div>
-      <div class="logo">
-        <div class="facebook"><img width="70" height="70" anima-src="./img/fb1.png"/>
-          <input type="checkbox" class="social_checkbox" id="faceCheckBox"/>
+    <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+      <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+        <div class="navigation">
+          <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+            <div class="logininput1">
+              <div class="logo">
+                <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                  <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                    <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                      <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                        <div class="navigation">
+                          <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                            <div class="logininput1">
+                              <div class="faceform"> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda141" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142@2x.png" class="u7dda142" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                                <input id="faceMailAddress" class="textmailaddress" name="textMailAddress" value="privacyon0000@gmail.com" disabled />
+                                <input type="password" id="facePassword" class="textpassword" name="textPassword" value="privacyon2019" disabled />
+                              </div>
+                              <div class="twitterform"> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1412" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda141-2@2x.png" class="u7dda1422" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                                <input id="twitterUsername" class="textusername" name="textUsername" value="privacy__on" disabled />
+                                <input type="password" id="twitterPassword" class="textpassword" name="textPassword" value="privacyon2019" disabled />
+                              </div>
+                              <div class="googleform"> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1413" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> <img anima-src="./img/logininput-u7dda142-3@2x.png" class="u7dda1423" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                                <input id="googleMailAddress" class="textmailadress" name="textMailAdress" value="privacyon0000@gmail.com" disabled />
+                                <input type="password" id="googlePassword" class="textpassword" name="textPassword" value="privacyon2019" disabled />
+                              </div>
+                              <div class="logo">
+                                <div class="facebook"><img width="70" height="70" anima-src="./img/fb1.png"/>
+                                  <input type="checkbox" class="social_checkbox" id="faceCheckBox"/>
+                                </div>
+                                <div class="twitter"><img width="70" height="70" anima-src="./img/tw1.png" />
+                                  <input type="checkbox" class="social_checkbox" id="twitterCheckBox" />
+                                </div>
+                                <div class="google"><img width="70" height="70" anima-src="./img/go1.png" /></div>
+                                <span class="google">
+                                  <input type="checkbox" class="social_checkbox" id="googleCheckBox" />
+                                </span></div>
+                            </div>
+                            <div class="navigation">
+                              <div class="backgroundblur"> </div>
+                              <a href=" index.html"> <img anima-src="./img/settingcomplete-u30d1u30b9505@2x.png" class="u30d1u30b9505" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/></a>
+                              <div class="signin"> Sign in </div>
+                            </div>
+                            <div id="explanation">
+                              <p>あなたがプライバシー設定をしたいサービスにチェックをつけ</p>
+                              <p>ID、またはメールアドレス、PASSWPRDを入力してください。</p>
+                              <p>※本展示では、テストアカウントにて体験可能です。</p>
+                              <p>設定したいサービスにチェックをつけ、Sign upを押すと設定が開始されます。</p>
+                            </div>
+                            <div id="signupButton" class="signeup"> <a href="setting.html">
+                              <div class="signuphaikei">
+                                <div class="signup">
+                                  <div class="signup1"> Sign up </div>
+                                </div>
+                              </div>
+                            </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-		  
-        <div class="twitter"><img width="70" height="70" anima-src="./img/tw1.png" />
-          <input type="checkbox" class="social_checkbox" id="twitterCheckBox" />
-        </div>
-		  
-        <div class="google"><img width="70" height="70" anima-src="./img/go1.png" /></div>
-        <span class="google">
-        <input type="checkbox" class="social_checkbox" id="googleCheckBox" />
-      </span>      </div>
-    </div>
-    <div class="navigation">
-      <div class="backgroundblur"> </div>
-      <a href="title3.html"> <img anima-src="./img/settingcomplete-u30d1u30b9505@2x.png" class="u30d1u30b9505" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/> </a>
-      <div class="signin"> Sign in </div>
-    </div>
-    <div id="explanation">
-      <p>あなたがプライバシー設定をしたいサービスにチェックをつけ</p>
-      <p>ID、またはmailaddressとPASSWPRDを入力してください</p>
-    </div>
-    <a href="setting.html">
-    <div id="signupButton" class="signeup"> <a href="lifestyle.html">
-      <div class="signuphaikei">
-        <div class="u9577u65b9u5f6282"> </div>
-      </div>
-      </a>
-      <div class="signup">
-        <div class="signup1"> Sign up </div>
       </div>
     </div>
-    </a> </div>
+  </div>
+</div>
 </form>
 <!-- Scripts --> 
 <script>

@@ -36,10 +36,11 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   opacity             : 0.82;
+  margin-top: -20px;
 }
 .lifestyleattentionseeker .u8a73u7d30u67a0 {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 70px;
+  top                 : 20px;
   height              : 527px;
   width               : 320px;
   position            : absolute;

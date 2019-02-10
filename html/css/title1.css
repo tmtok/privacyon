@@ -9,6 +9,10 @@
   src: url('../fonts/Zetafonts - AntipastoPro-DemiBold.otf') format("opentype");
 }
 
+.swiper-slide img {
+	margin-left: 33px;
+}
+
 .title1 {
   width               : 100%;
   min-width           : 375px;
@@ -29,16 +33,16 @@ div {
   -webkit-text-size-adjust: none;
 }
 .title1 .chevronright {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 609px;
-  height              : 19px;
-  width               : 9px;
-  position            : absolute;
-  margin              : 0;
-  left                : 183px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 523px;
+    height              : 19px;
+    width               : 9px;
+    position            : absolute;
+    margin              : 0;
+    left                : 183px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 .title1 .text {
   background-color    : rgba(255,255,255,0.0);
@@ -53,21 +57,21 @@ div {
   transform           : rotate(0deg);
 }
 .title1 .text .privacyonu306ftwitteru30fb {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 384px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 76px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
-  font-size           : 15.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : center;
-  line-height         : 23.0px;
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 419px;
+    height              : 50px;
+    width               : 377px;
+    position            : absolute;
+    margin              : 0;
+    left                : -2px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+    font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+    font-size           : 15.0px;
+    color               : rgba(0, 0, 0, 1.0);
+    text-align          : center;
+    line-height         : 23.0px;
 }
 .title1 .text .u3042u306au305fu306fu30d7u30e9u30a4u30d0u30b7u30fcu8a2du5b9au3092u3057u3066u307eu3059u304buff1f {
     background-color    : rgba(255,255,255,0.0);
@@ -88,16 +92,16 @@ div {
 	text-align: center;
 }
 .title1 .text .photo1 {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 250px;
-  width               : 375px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+    background-color    : rgba(255,255,255,0.0);
+    top                 : -180px;
+    height              : 600px;
+    width               : 375px;
+    position            : absolute;
+    margin              : 0;
+    left                : -1px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 /* .anima-animate-appear prefix for appear animations */
 .anima-animate-appear {

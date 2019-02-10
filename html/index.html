@@ -2,12 +2,33 @@
 <html>
     <head>
         <link href="./img/privacyon_icon.png" rel="shortcut icon"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
         <link href="./css/title1.css" rel="stylesheet" type="text/css"/>
+		<link href="./css/swiper_1.css" rel="stylesheet" type="text/css"/>
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     </head>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+		<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="./img/1.gif"  alt="1" width="380px" height="570px"  ></a></div>
+        <div class="swiper-slide"><img src="./img/2.gif"  alt="1" width="380px" height="570px"  ></a></div>
+        <div class="swiper-slide"><img src="./img/3.gif"  alt="1" width="380px" height="570px" ></a></div>
+	    <div class="swiper-slide"><img src="./img/4.gif"  alt="1" width="380px" height="570px"  >
+          <a href="logininput.html" class="btn-real"><i class="fa fa-power-off"></i></a></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+</div>
         <input id="anPageName" name="page" type="hidden" value="title1"/>
         <form action="none" class="title1" method="post" name="none">
             <div style="width: 375px; height: 100%; position:relative; margin:auto;">
@@ -15,16 +36,9 @@
                     <img anima-src="./img/title2-chevron-right@2x.png" class="chevronright" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
                 </a>
               <div class="text">
-                <div class="privacyonu306ftwitteru30fb">
-                        Privacy ONは<br />Twitter・facebook・googleの<br />プライバシー設定を簡単に<br />変更できるサービスです。
-                  </div>
-                  <div class="u3042u306au305fu306fu30d7u30e9u30a4u30d0u30b7u30fcu8a2du5b9au3092u3057u3066u307eu3059u304buff1f">
-                      <p>あなたはプライバシー設定を</p>
-                      <p>自分に合わせてカスタマイズしてますか？ </p>
-                  </div>
-                  <img anima-src="./img/title2-photo1.png" class="photo1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
-                </div>
-            </div>
+
+              </div>
+          </div>
         </form>
         <!-- Scripts -->
         <script>
@@ -103,5 +117,22 @@
             }, 200);
         </script>
         <!-- End of Scripts -->
+		<script>
+	var mySwiper = new Swiper ('.swiper-container', {
+	loop: true,
+	slidesPerView: 2,
+  	spaceBetween: 10,
+  	centeredSlides : true,
+	pagination: '.swiper-pagination',
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	breakpoints: {
+		767: {
+			slidesPerView: 1,
+			spaceBetween: 0
+		}
+	}
+}) 
+	</script>
     </body>
 </html>

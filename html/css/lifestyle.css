@@ -5,6 +5,10 @@
   src: url('../fonts/mono.ttf') format("truetype");
 }
 
+
+
+
+
 .lifestyle {
   width               : 100%;
   min-width           : 375px;
@@ -24,9 +28,11 @@ div {
 div {
   -webkit-text-size-adjust: none;
 }
+
+
 .lifestyle .attentionseeker {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 549px;
+  top                 : 509px;
   height              : 85px;
   width               : 338px;
   position            : absolute;
@@ -49,7 +55,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .attentionseeker .u9577u65b9u5f6295 {
+.lifestyle .attentionseeker .lifestyle5 {
     background-color    : rgba(201, 25, 116, 1.0);
     top                 : 1px;
     height              : 85px;
@@ -130,7 +136,7 @@ div {
     text-align          : left;
     line-height         : 18.0px;
 }
-.lifestyle .attentionseeker .u6b32u3057u304cu308au30a2u30c6u30f3u30b7u30e7u30f3 {
+.lifestyle .attentionseeker .style5 {
   background-color    : rgba(255,255,255,0.0);
   top                 : 21px;
   height              : auto;
@@ -149,7 +155,7 @@ div {
 }
 .lifestyle .greedtrend {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 452px;
+  top                 : 412px;
   height              : 85px;
   width               : 338px;
   position            : absolute;
@@ -172,7 +178,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .greedtrend .u9577u65b9u5f6294 {
+.lifestyle .greedtrend .lifestyle4 {
   background-color    : rgba(44, 181, 224, 1.0);
   top                 : 0px;
   height              : 85px;
@@ -392,7 +398,7 @@ div {
 }
 .lifestyle .myway {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 355px;
+  top                 : 315px;
   height              : 85px;
   width               : 338px;
   position            : absolute;
@@ -432,7 +438,7 @@ div {
   text-align          : left;
   line-height         : 35.0px;
 }
-.lifestyle .myway .u9577u65b9u5f6293 {
+.lifestyle .myway .lifestyle3 {
   background-color    : rgba(76, 176, 87, 1.0);
   top                 : 0px;
   height              : 85px;
@@ -640,7 +646,7 @@ div {
 }
 .lifestyle .friendsforever {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 258px;
+  top                 : 218px;
   height              : 85px;
   width               : 338px;
   position            : absolute;
@@ -663,7 +669,7 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .friendsforever .u9577u65b9u5f6292 {
+.lifestyle .friendsforever .lifestyle2 {
   background-color    : rgba(243, 194, 52, 1.0);
   top                 : 0px;
   height              : 85px;
@@ -919,7 +925,7 @@ div {
 }
 .lifestyle .saftyfirst {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 161px;
+  top                 : 121px;
   height              : 85px;
   width               : 338px;
   position            : absolute;
@@ -942,18 +948,18 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .saftyfirst .u9577u65b9u5f629 {
-  background-color    : rgba(232, 86, 42, 1.0);
-  top                 : 0px;
-  height              : 85px;
-  width               : 338px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  border-radius       : 42px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+.lifestyle .saftyfirst .lifestyle1 {
+    background-color    : rgba(232, 86, 42, 1.0);
+    top                 : -1px;
+    height              : 85px;
+    width               : 338px;
+    position            : absolute;
+    margin              : 0;
+    left                : 1px;
+    border-radius       : 42px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 .lifestyle .saftyfirst .safetyfirst {
     background-color    : rgba(255,255,255,0.0);
@@ -1076,22 +1082,22 @@ div {
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
-.lifestyle .u4ee5u4e0bu306e5u3064u304bu3089u3042u306au305fu306eu30cdu30c3u30c8u30e9u30a4u30d5u30b9u30bf {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 85px;
-  height              : auto;
-  width               : auto;
-  position            : absolute;
-  margin              : 0;
-  left                : 32px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
-  font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
-  font-size           : 15.0px;
-  color               : rgba(0, 0, 0, 1.0);
-  text-align          : center;
-  line-height         : 23.0px;
+.lifestyle .text {
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 66px;
+    height              : auto;
+    width               : auto;
+    position            : absolute;
+    margin              : 0;
+    left                : 31px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+    font-family         : "HiraginoSans-W4", Helvetica, Arial, serif;
+    font-size           : 15.0px;
+    color               : rgba(0, 0, 0, 1.0);
+    text-align          : center;
+    line-height         : 23.0px;
 }
 .lifestyle .navigation {
   background-color    : rgba(255,255,255,0.0);
@@ -1171,6 +1177,13 @@ div {
   -o-animation-delay  : 0;
   animation-delay     : 0;
 }
+
+
+
+.lifestyle1 {
+    padding:  -top: -20px;
+}
+
 @-webkit-keyframes anima-reveal {
   0%
    
@@ -1226,4 +1239,8 @@ div {
   {
       opacity: 1;
     }
+}
+
+.attentionseeker {
+    margin-top: -20px;
 }

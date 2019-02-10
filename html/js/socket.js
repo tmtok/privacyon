@@ -2,7 +2,7 @@ var socket;
 
 $(document).ready(function() {
   // var socket = io.connect("https://movinglight-settings.herokuapp.com/");
-  socket = io.connect("http://192.168.1.121:5000");
+  socket = io.connect("http://192.168.1.1:5000");
   receiveSocket();
 });
 
