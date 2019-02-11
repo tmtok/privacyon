@@ -33,12 +33,12 @@ div {
 }
 .logininput .logininput1 {
     background-color    : rgba(255,255,255,0.0);
-    top                 : 173px;
+    top                 : 150px;
     height              : 361px;
     width               : 343px;
     position            : absolute;
     margin              : 0;
-    left                : 18px;
+    left                : 5px;
     -ms-transform       : rotate(0deg); /* IE 9 */
     -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
     transform           : rotate(0deg);
@@ -297,7 +297,7 @@ div {
 .logininput .logininput1 .logo {
     background-color    : rgba(255,255,255,0.0);
     top                 : 0px;
-    height              : 350px;
+    height              : 300px;
     width               : 100px;
     position            : absolute;
     margin              : 0;
@@ -362,28 +362,28 @@ div {
 }
 
 .logininput .navigation {
-  background-color    : rgba(255,255,255,0.0);
-  top                 : 0px;
-  height              : 64px;
-  width               : 375px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+    background-color    : rgba(255,255,255,0.0);
+    top                 : -54px;
+    height              : 64px;
+    width               : 375px;
+    position            : absolute;
+    margin              : 0;
+    left                : -3px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 .logininput .navigation .backgroundblur {
-  background-color    : rgba(255, 255, 255, 1.0);
-  top                 : 0px;
-  height              : 64px;
-  width               : 375px;
-  position            : absolute;
-  margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+    background-color    : rgba(255, 255, 255, 1.0);
+    top                 : -118px;
+    height              : 64px;
+    width               : 375px;
+    position            : absolute;
+    margin              : 0;
+    left                : -2px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 .logininput .navigation .u30d1u30b9505 {
   background-color    : rgba(255,255,255,0.0);
@@ -418,7 +418,7 @@ div {
 }
 .logininput .signeup {
     background-color    : rgba(255,255,255,0.0);
-    top                 : 506px;
+    top                 : 473px;
     height              : 55px;
     width               : 343px;
     position            : absolute;
@@ -438,7 +438,7 @@ div {
 }
 .logininput .signeup .signuphaikei  {
   background-color    : rgba(0, 111, 255, 1.0);
-  height             : 55px;
+  height             : 35px;
   width               : 343px;
   position            : relative;
   margin              : 0;
@@ -449,25 +449,25 @@ div {
   transform           : rotate(0deg);
 }
 .logininput .signeup .signup {
-  background-color    : rgba(0,255,255,0.0);
-  top                 : 18px;
-  height              : 19px;
-  width               : 59px;
-  position            : absolute;
-  margin              : 0;
-  left                : 144px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
-  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-  transform           : rotate(0deg);
+    background-color    : rgba(0,255,255,0.0);
+    top                 : 7px;
+    height              : 19px;
+    width               : 59px;
+    position            : absolute;
+    margin              : 0;
+    left                : 143px;
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
 }
 .logininput .signeup .signup .signup1 {
     background-color    : rgba(255,255,255,0.0);
-    top                 : -1px;
+    top                 : 1px;
     height              : auto;
     width               : auto;
     position            : absolute;
     margin              : 0;
-    left                : -1px;
+    left                : 0px;
     -ms-transform       : rotate(0deg); /* IE 9 */
     -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
     transform           : rotate(0deg);
@@ -572,6 +572,5 @@ div {
     position: absolute;
     font-size: 10px;
     text-align: center;
-    margin-top: 30px;
-    top: 27px;
+    top: 5px;
 }
